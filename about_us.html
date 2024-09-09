@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Game Review</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        main {
+            min-height: 100vh;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1em 2em;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.3em;
+            margin: 20px 0;
+        }
+
+        .numbers-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+
+        .number-box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .number-box.green {
+            background-color: #28a745;
+        }
+
+        .number-box.yellow {
+            background-color: #ffc107;
+        }
+
+        .number-box.red {
+            background-color: #dc3545;
+        }
+
+        .level-up-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .level-up-section h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .content-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .content-row img {
+            width: 250px; 
+            height: auto;
+        }
+
+        .content-row p {
+            font-size: 1em;
+            margin: 0 20px;
+            max-width: 50%;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #333;
+            color: white;
+            font-size: 1.1em;
+            margin-top: auto;
+        }
+
+        .our-names li {
+            text-align: left;
+            margin: 10px;
+        }
+        footer a:hover {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Game Review</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="all_games.html">All Games</a></li>
+                <li><a href="myreviews.html">My Reviews</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to Game Review</h2>
+            <p>With us you can find a game and play it with pleasure.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=073699997f98386e7404d359f71cd403_l-5859721-images-thumbs&n=13" alt="Popular game characters" style="width:100%; max-width:800px; display:block; margin: 20px auto;">
+            <p>Discover the Power of the Game Review.</p>
+
+            <div class="numbers-container">
+                <div class="number-box green">93</div>
+                <div class="number-box yellow">57</div>
+                <div class="number-box red">34</div>
+            </div>
+
+            <p>This is a single score that represents the critical consensus for games.</p>
+        </section>
+
+        <section class="level-up-section">
+            <h3>Level Up Your Experience</h3>
+
+            <div class="content-row">
+                <img src="https://www.metacritic.com/a/neutron/images/about/rating-metascore.png" alt="Ratings and Reviews">
+                <p><strong>Sound off with your own ratings and reviews</strong><br>
+                    Share your voice with our community by adding your own ratings and reviews.</p>
+            </div>
+
+            <div class="content-row">
+                <p><strong>Find where to play</strong><br>
+                    Manage your preferred gaming platforms for your next choice of entertainment.</p>
+                <img src="https://www.metacritic.com/a/neutron/images/about/where-to-watch.png" alt="Find where to play">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Game Review
+        <div><a href="about_us.html">About Us</a></div>
+        <ul class="our-names">
+            <li>Danial Makhmud : index, all_games    </li>
+            <li>Alisher Samat : news, news1, 2, 3   </li>
+            <li>Ersultan Boranbaev : about_us, my reviews</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

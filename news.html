@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/newspage.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>News</title>
+</head>
+<style>
+    a {
+            text-decoration: none;
+            color: white
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            background-color: transparent;
+            position: static;
+        }
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            display: block;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #007BFF;
+        }
+        section {
+            margin: auto;
+            margin-bottom: 50px;
+            padding: 2em;
+            max-width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        footer {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #333;
+            color: white;
+            font-size: 1.1em;
+        }
+        .our-names li {
+            text-align: left;
+            margin: 10px;
+        }
+        footer a:hover {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+</style>
+<body background="styles/image/background-image.jpg">
+
+    <header>
+        <h1><a href="index.html">Game Review</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="all_games.html">All Games</a></li>
+                <li><a href="myreviews.html">My Reviews</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <div class="news-container">
+    <h1>Game News</h1>
+    <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p>
+</div>
+
+
+<div class = "content-container">
+
+<div class = "game-news-container">
+
+<div class = "game-news">
+    <img src="styles/image/destiny-2-launch-art-feature.avif" width="290" height="240">
+    <h2><a href="news1.html"><span>Destiny 2 Has Hit a New Low</span></a>
+    <p>Steam charts confirm that Destiny 2 has hit a new low which may suggest that The Final Shape doesn't have the staying power of other expansions.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>5 days ago </span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/astro-bot-header.avif" width="290" height="240">
+    <h2><a href="news2.html"><span>Astro's Playroom Celebrated Astro Bot's Debut in an Amazing Way</span></a>
+    <p>Astro Bot just launched, but Team Asobi hasn't forgotten Astro's Playroom, as gamers find an awesome detail in the previous Astro title.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>1 day ago</span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/honkai-star-rail.avif" width="290" height="240">
+    <h2> <a href="news3.html"><span>Honkai: Star Rail Leaks New Path</span></a>
+    <p>Honkai: Star Rail leaks are teasing the addition of a new playable Path to the game, the first new class added since the RPG's release.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>10 hours ago</span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/astro-bot-logo.avif" width="290" height="240">
+    <h2><a href="#"><span>Astro Bot Hints at More Post-Launch Cameos</span></a>
+    <p>Some newly surfaced evidence suggests that even more cameos from many famous video game characters could be coming to Astro Bot in the future.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>1 hour ago</span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/harry-potter.avif" width="290" height="240">
+    <h2> <a href="#"><span>Harry Potter: Quidditch Champions Hosting Special Event This Weekend</span> </a>
+    <p>Unbroken Studios' Harry Potter: Quidditch Champions launches a special weekend event geared toward commemorating its recent release.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>1 week ago </span></p>
+    </h2>
+</div>
+
+
+<div class = "game-news">
+    <img src="styles/image/genshin-impact.avif" width="290" height="240">
+    <h2><a href="#"><span>Genshin Impact Leak Teases Major Upcoming Event</span></a>
+    <p>A new Genshin Impact leak is hinting at the return of one of the game's most popular recurring events, set to arrive in an upcoming update.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>2 weeks ago</span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/battlefield-2042.avif" width="290" height="240">
+    <h2><a href="#"><span>Battlefield 2042 Reveals Patch Notes for September 2024 Update</span></a>
+    <p>EA reveals the official patch notes for Battlefield 2042's upcoming September 2024 update, which will bring a few changes to the first-person shooter.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>15 minutes ago </span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/freefire.jpg" width="290" height="240">
+    <h2><a href="#"><span>Free Fire Kicks Off Its 7Th Anniversary Celebrations</span></a>
+    <p>Free Fire is celebrating its seventh anniversary, and players are invited to join in the festivities starting tomorrow!</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>23 hours ago </span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/gta6.avif" width="290" height="240">
+    <h2> <a href="#"><span>Rockstar Reportedly Tried Lowballing Band for GTA 6 Song</span> </a>
+    <p>Rockstar reportedly tried lowballing an established band for indefinite rights to use one of their songs in Grand Theft Auto 6.</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>3 hours ago</span></p>
+    </h2>
+</div>
+
+<div class = "game-news">
+    <img src="styles/image/Spongebob_Event_.webp" width="290" height="240">
+    <h2> <a href="#"><span>How to get Spongebob El Primo for FREE!</span> </a>
+    <p>You will be able to get SpongeBob El Primo FOR FREE! Collect Krusty Kash to get SpongeBob Skins, Power-Ups, and more!</p>
+    <p class = "time-icon"><i class='bx bx-time-five'></i> <span>5 minutes ago</span></p>
+    </h2>
+</div>
+
+
+
+</div>
+
+<div class="topten-container">
+    <h3>Top 10 Games This Year</h3>
+<ol>
+    <li><a href="https://store.steampowered.com/app/2778580/ELDEN_RING_Shadow_of_the_Erdtree/" target="_blank">Elden Ring: Shadow of the Erdtree </a></li>
+    <img src="styles/image/EldenRing.jpg" alt="#" width="150" height="150">
+    <li><a href="https://www.playstation.com/en-us/games/astro-bot/" target="_blank">Astro Bot</a></li>
+    <img src="styles/image/astrobot.jpeg" alt="#" width="150" height="150">
+    <li><a href="https://ffvii.square-enix-games.com/en-us/games/rebirth" target="_blank">Final Fantasy VII Rebirth</a></li>
+    <img src="styles/image/finalfantasy.avif" alt="#" width="150" height="150">
+    <li><a href="https://store.steampowered.com/app/813230/ANIMAL_WELL/" target="_blank">Animal Well</a></li>
+    <img src="styles/image/animalwell.jpg" alt="#" width="150" height="150">
+    <li><a href="https://store.steampowered.com/app/2379780/Balatro/" target="_blank">Balatro</a></li>
+    <img src="styles/image/balatro.avif" alt="#" width="150" height="150">
+    <li><a href="https://www.playstation.com/en-us/games/the-last-of-us-part-ii-remastered/" target="_blank">The Last of Us Part II Remastered</a></li>
+    <img src="styles/image/thelastofus.jpeg" alt="#" width="150" height="150">
+    <li><a href="https://thankgoodness.game/" target="_blank"> Thank Goodness You're Here!</a></li>
+    <img src="styles/image/thankgoodness.avif" alt="#" width="150" height="150">
+    <li><a href="https://en.bandainamcoent.eu/tekken/tekken-8" target="_blank">Tekken 8</a></li>
+    <img src="styles/image/tekken8.jpg" alt="#" width="150" height="150">
+    <li><a href="https://store.steampowered.com/app/2336880/Destiny_2_The_Final_Shape/" target="_blank">Destiny 2: The Final Shape</a></li>
+    <img src="styles/image/destiny2.jpg" alt="#" width="150" height="150">
+    <li><a href="http://www.tsukihime-en.com/" target="_blank">Tsukihime: A Piece of Blue Glass Moon</a></li>
+    <img src="styles/image/Tsukihime_blue_glass_cover.webp" alt="#" width="150" height="150" >
+    
+</ol>
+</div>
+
+</div>
+
+<div class="game-trailer-container">
+
+<div class="game-trailer">
+    <video src="styles/video/hello-neighbor-2-announcement-trailer.mp4" width="400" controls autoplay muted loop></video>
+    <h4>Hello Neighbor 2 - Announcement Trailer
+        <p> <i class='bx bx-time-five'></i> <span>7 days ago</span></p>
+    </h4>
+</div>
+
+<div class="game-trailer">
+    <video src="styles/video/thecallistoprotocol.mp4" width="400" controls autoplay muted loop></video>
+    <h4>The Callisto Protocol - Official Trailer
+        <p> <i class='bx bx-time-five'></i> <span>1 day ago</span></p>
+    </h4>
+</div>
+
+<div class="game-trailer">
+    <video src="styles/video/valiant-hearts-the-great-war-official-trailer.mp4" width="400" controls autoplay muted loop></video>
+    <h4>Valiant Hearts - Official Trailer
+        <p> <i class='bx bx-time-five'></i> <span>6 days ago</span></p>
+    </h4>
+</div>
+
+<div class="game-trailer">
+    <video src="styles/video/cookie-run-kingdom-trailer.mp4" width="400" controls autoplay muted loop></video>
+    <h4>Cookie Run Kingdom - Trailer
+    <p> <i class='bx bx-time-five'></i> <span>10 days ago</span></p>
+    </h4> 
+</div>
+
+<div class="game-trailer">
+    <video src="styles/video/ori-and-the-will-of-the-wisps-e3-2019-gameplay-trailer.mp4" width="400" controls autoplay muted loop></video>
+    <h4>Ori and the Will of the Wisps - Gameplay Trailer
+    <p> <i class='bx bx-time-five'></i> <span>10 days ago</span></p>
+    </h4> 
+</div>
+
+<div class="game-trailer">
+    <video src="styles/video/marvel-s-spider-man-miles-morales-launch-trailer.mp4" width="400" controls autoplay muted loop></video>
+    <h4>Marvel's Spider-Man Miles Morales - Launch Trailer
+    <p> <i class='bx bx-time-five'></i> <span>12 days ago</span></p>
+    </h4> 
+</div>
+</div>
+
+<div class="comment-container">
+    <h2>Do you have a fun to read this ?</h2>
+</div>
+
+
+<footer>
+    <div><a href="about_us.html">About Us</a></div>
+    <ul class="our-names">
+        <li>Danial Makhmud: index, all_games    </li>
+        <li>Alisher Samat: news, news1, 2, 3   </li>
+        <li>Ersultan Boranbaev: about_us, my reviews</li>
+    </ul>
+<div class="footerButtom">
+    <p>Copyright &copy;2024;</p>
+</div>
+
+</footer>
+
+
+</body>
+</html>
