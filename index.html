@@ -1,120 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Review</title>
-    <style>
-        a {
-            text-decoration: none;
-            color: white
-        }
-        ul {
-            list-style: none;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 2em;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav {
-            background-color: transparent;
-            position: static;
-        }
-        nav ul {
-            display: flex;
-            justify-content: flex-end;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            padding: 1em 2em;
-            font-size: 1.2em;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav ul li a:hover {
-            background-color: #007BFF;
-        }
-        section {
-            margin: auto;
-            margin-bottom: 50px;
-            padding: 2em;
-            max-width: 100%;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-        footer {
-            text-align: center;
-            padding: 2em 0;
-            background-color: #333;
-            color: white;
-            font-size: 1.1em;
-        }
-        .our-names li {
-            text-align: left;
-            margin: 10px;
-        }
-        .game-scroll {
-            display: flex;
-            gap: 10px;
-        }
-        .game-window {
-            width: 250px;
-            height: 400px;
-            border: 10px solid #ccc;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            position: relative;
-            flex-shrink: 0;
-        }
-        .game-window img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .game-window figure {
-            height: 70%;
-            border-bottom: 10px solid #ccc;
-            margin: 0;
-            padding: 0;
-        }
-        .game-window figcaption {
-            font-weight: bold;
-            margin-bottom: auto;
-            font-size: 1.1em;
-        }
-        .rating {   
-            margin-top: auto;   
-            font-size: 1.1em;
-        }
-        footer a:hover {
-            color: #007BFF;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap">
+    <link rel="stylesheet" href="styles/css/header-footer.css">
+    <link rel="stylesheet" href="styles/css/index.css">
 </head>
 <body>
     <header>
@@ -214,8 +106,47 @@
                     </figure>
                     <div class="rating">8.1/10</div>
                 </div>
-
-
+            </div>
+        </section>
+        <section>
+            <h2>Recent Releases</h2>
+            <div class="game-scroll">
+                <div class="game-window">
+                    <figure>
+                        <img src="images/game8.jpg" alt="Bodycam">
+                        <figcaption>Bodycam</figcaption>
+                    </figure>
+                    <div class="rating">7.9/10</div>
+                </div>
+                <div class="game-window">
+                    <figure>
+                        <img src="images/game7.jpeg" alt="Star Wars">
+                        <figcaption>Star Wars</figcaption>
+                    </figure>
+                    <div class="rating">5.0/10</div>
+                </div>
+                <div class="game-window">
+                    <figure>
+                        <img src="images/game11.jpg" alt="Terminus: Zombie Survivors">
+                        <figcaption>Terminus: Zombie Survivors</figcaption>
+                    </figure>
+                    <div class="rating">8.1/10</div>
+                </div>
+                <div class="game-window">
+                    <figure>
+                        <img src="images/game9.jpg" alt="FNAF: Into The Pit">
+                        <figcaption>FNAF: Into The Pit</figcaption>
+                    </figure>
+                    <div class="rating">7.7/10</div>
+                </div>
+                <div class="game-window">
+                    <figure>
+                        <img src="images/game10.jpeg" alt="Once Human">
+                        <figcaption>Once Human</figcaption>
+                    </figure>
+                    <div class="rating">6.1/10</div>
+                </div>
+               
             </div>
         </section>
     </main>
@@ -223,12 +154,10 @@
         &copy; Game Review
         <div><a href="about_us.html">About Us</a></div>
         <ul class="our-names">
-            <li>Danial Makhmud      : index, all_games      </li>
-            <li>Alisher Samat       : news, news1, 2, 3     </li>
-            <li>Ersultan Boranbaev  : about_us, my reviews  </li>
+            <li>Danial Makhmud</li>
+            <li>Alisher Samat</li>
+            <li>Ersultan Boranbaev</li>
         </ul>
     </footer>
-
 </body>
-
 </html>

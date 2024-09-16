@@ -5,133 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Review</title>
-    <style>
-        a {
-            text-decoration: none;
-            color: white
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 25% 1fr;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 2em;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        nav {
-            background-color: transparent;
-            position: static;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 1em 2em;
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #007BFF;
-            color: #fff;
-        }
-
-
-        footer {
-            text-align: center;
-            padding: 2em 0;
-            background-color: #333;
-            color: white;
-            font-size: 1.1em;
-            margin-top: auto;
-        }
-
-        .our-names li {
-            text-align: left;
-            margin: 10px;
-        }
-
-        .filter {
-            padding: 20px;
-            background-color: #f2f2f2;
-            box-sizing: border-box;
-        }
-
-        .games {
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .small-game-window {
-            display: grid;
-            grid-template-columns: 150px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-
-        .small-game-window img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-
-        .small-game-window h3 {
-            font-size: 1.5em;
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/css/header-footer.css">
+    <link rel="stylesheet" href="styles/css/all_games.css">
 </head>
 
 <body>
@@ -149,18 +24,51 @@
     <main>
         <section class="filter">
             <h2>Filter Options</h2>
+            <div class="search-bar">
+                <label for="site-search">Search:</label>
+                <input type="search" id="site-search" name="q" />
+                <button>Search</button>
+            </div>
             <div class="filter-group">
                 <h3>Genre</h3>
                 <label><input type="checkbox" name="genre" value="action"> Action</label>
                 <label><input type="checkbox" name="genre" value="adventure"> Adventure</label>
                 <label><input type="checkbox" name="genre" value="rpg"> RPG</label>
-                <label><input type="checkbox" name="genre" value="horror"> Horror</label>
+                <label><input type="checkbox" name="genre" value="Shooter"> Shooter</label>
+                <label><input type="checkbox" name="genre" value="Platformer"> Platformer</label>
+                <label><input type="checkbox" name="genre" value="Strategy"> Strategy</label>
+                <label><input type="checkbox" name="genre" value="Sports"> Sports</label>
+                <label><input type="checkbox" name="genre" value="Stealth"> Stealth</label>
+                <label><input type="checkbox" name="genre" value="Survival"> Survival</label>
+                <label><input type="checkbox" name="genre" value="Visual Novel"> Visual Novel</label>
+                <label><input type="checkbox" name="genre" value="Rhythm"> Rhythm</label>
             </div>
             <div class="filter-group">
                 <h3>Platform</h3>
                 <label><input type="checkbox" name="platform" value="pc"> PC</label>
                 <label><input type="checkbox" name="platform" value="console"> Console</label>
                 <label><input type="checkbox" name="platform" value="mobile"> Mobile</label>
+            </div>
+            <div class="filter-group">
+                <h3>Release Date</h3>
+                <label><input type="checkbox" name="Release Date" value="Last 30 Days"> Last 30 Days</label>
+                <label><input type="checkbox" name="Release Date" value="Last 6 Months"> Last 6 Months</label>
+                <label><input type="checkbox" name="Release Date" value="Last Year"> Last Year</label>
+                <label><input type="checkbox" name="Release Date" value="Older than 1 Year"> Older than 1 Year</label>
+                <label><input type="checkbox" name="Release Date" value="Upcoming Games"> Upcoming Games</label>
+            </div>
+            <div class="filter-group"></div>
+                <h3>Game Mode</h3>
+                <label><input type="checkbox" name="Game Mode" value="Single-player"> Single-player</label>
+                <label><input type="checkbox" name="Game Mode" value="Multiplayer"> Multiplayer</label>
+                <label><input type="checkbox" name="Game Mode" value="Co-op"> Co-op</label>
+            </div>
+            <div class="filter-group"></div>
+                <h3>Price Range</h3>
+                <label><input type="checkbox" name="Game Mode" value="Free-to-play"> Free-to-play</label>
+                <label><input type="checkbox" name="Game Mode" value="$10 - $30"> $10 - $30</label>
+                <label><input type="checkbox" name="Game Mode" value="$30 - $60"> $30 - $60</label>
+                <label><input type="checkbox" name="Game Mode" value="Over $60">Over $60</label>
             </div>
         </section>
         <section class="games">
@@ -185,6 +93,26 @@
                     <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
                     <h3>Red Dead Redemption 2</h3>
                 </div>
+                <div class="small-game-window">
+                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                </div>
+                <div class="small-game-window">
+                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                </div>
+                <div class="small-game-window">
+                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                </div>
+                <div class="small-game-window">
+                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                </div>
+                <div class="small-game-window">
+                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                </div>
             </div>
         </section>
     </main>
@@ -192,9 +120,9 @@
         &copy; Game Review
         <div><a href="about_us.html">About Us</a></div>
         <ul class="our-names">
-            <li>Danial Makhmud: index, all_games    </li>
-            <li>Alisher Samat: news, news1, 2, 3   </li>
-            <li>Ersultan Boranbaev: about_us, my reviews</li>
+            <li>Danial Makhmud </li>
+            <li>Alisher Samat </li>
+            <li>Ersultan Boranbaev</li>
         </ul>
     </footer>
 
