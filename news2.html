@@ -5,101 +5,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Review</title>
-    <link rel="stylesheet" href="styles/css/news1.css">
+    <link rel="stylesheet" href="styles/css/news2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <body background="styles/image/background-wallpaper3.jpg">
+    <body>
 
-        <header>
-            <h1><a href="index.html">Game Review</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Main Page</a></li>
-                    <li><a href="all_games.html">All Games</a></li>
-                    <li><a href="myreviews.html">My Reviews</a></li>
-                    <li><a href="news.html">News</a></li>
+        <header id = "main-header">
+            <h1 class = "main-title"><a href="index.html">Game Review</a></h1>
+            <nav class = "main-nav">
+                <ul class = "main-nav-list">
+                    <li><a href="index.html" class = "main-nav-link">Main Page</a></li>
+                    <li><a href="all_games.html" class = "main-nav-link">All Games</a></li>
+                    <li><a href="myreviews.html" class = "main-nav-link">My Reviews</a></li>
+                    <li><a href="news.html" class = "main-nav-link">News</a></li>
                 </ul>
             </nav>
         </header>
 
 
-        <div class="game-news-container">
-            <h1>Astro's Playroom Celebrated Astro Bot's Debut in an Amazing Way</h1>
+        <section class="game-news-container">
+            <h1 class = "game-title">Astro's Playroom Celebrated Astro Bot's Debut in an Amazing Way</h1>
             <img src="styles/image/astro-bot-header.avif" alt="#" width="500" height="300">
             
-        </div>
+        </section>
 
 
-        <div class="all-text-content">
+        <section class="all-text-content">
 
-        <div class="game-text">
+        <article class="game-text">
             <ul>
                 <li>Astro Bot is being lauded by critics and players following its early September launch.</li>
                 <li>Team Asobi threw a midnight launch party for the game in Astro's Playroom.</li>
                 <li>Fans are excited about potential post-launch plans for Astro Bot based on credits hints.</li>
             </ul>
-        </div>
+        </article>
 
-        <div class = "game-text1">
+        <article class = "game-text1">
             <p>Team Asobi threw an Astro Bot launch party in Astro's Playroom. Astro Bot has been in the works for a few years, and cautious excitement has led to outright optimism on the part of many gamers. Many people have been wanting to see a full-fledged Astro Bot game for the PlayStation 5 since its launch, since Astro is a character that has been used to show off what makes the PlayStation brand so special in smaller titles like Astro's Playroom.</p>
             <p>People are loving Astro Bot so far. This game is being lauded as PlayStation's own Super Mario 64 moment, albeit nearly 30 years later. For uninitiated gamers, Astro Bot is a brand-new character platformer title that makes use of the PlayStation brand and DualSense controller, using Sony deep cuts to appeal to nostalgia while seeking interesting ways to expand on traditional approaches to gameplay. Astro Bot launched on September 6.</p>
+        </article>
+
+    </section>
+
+
+
+    <!-- Question Container -->
+
+    
+    <article class="question-container">
+
+        <h2 class="question-word">Do you have a fun to read this ?</h2>
+    
+    
+        <form action="" class = "form-for-question" >
+    
+            <input type="radio" id = "answer-yes">
+            <label for="yes" id="label-yes">Yes</label> 
+            <input type="radio" id = "answer-no">
+            <label for="no" id="label-no">No</label>
+            <button type = "button" id = "button">Submit</button>
+        </form>
+    
+    </article>
+
+
+    <!-- Comments -->
+
+    <section class = "thread-container">
+    <i class='bx bx-message-dots' id = "message-icon"></i>
+    <span class = "title-message">THREAD</span>
+  <p class="message-description">We want to hear from you! Share your opinions in the thread below and remember to keep it respectful.</p>
+
+    </section>
+
+
+    <section class = "user-comment-container">
+
+
+        <div class = "user-comment-input">
+            <i class='bx bxs-user-circle' id = "user-icon"></i>
+            <input type="text" value=" Reply / Post " id = "input-comment-container">
+            </div>
+
+
+        <div class="user-comment-container-in">
+
+        <div class = "user-comment">
+        <i class='bx bxs-user-circle' id = "user-icon"></i>
+        <span class = "username"> Brett</span>
         </div>
+
+        <article class = "text-comment">
+        <p>Day 1 Astro gang.</p>
+        </article>
+
+      
+
+
+
+           
 
     </div>
 
-    
-    <div class="comment-container">
-        <h2>Do you have a fun to read this ?</h2>
-    </div>
-    
+    </section>
 
+    <!-- Footer -->
     
-    <footer>
+    <footer id = "footer-container">
     
-        <section class = "team">
-    
-        <div class = "center">
-            <h1>Our Team</h1>
-        </div>
+        <section class = "ourteam-container">
     
     
         <div class="team-container">
     
     
-            <div class="box">
+            <div class="team-box">
                 <img src="styles/image/team2.jpg" alt="">
                 <h3>Danial Makhmud</h3>
                 <h5>Developer</h5>
                 <div class = "icons">
-                    <a href=""><i class='bx bxl-telegram'></i></a>
+                    <a href=""><i class='bx bxl-telegram' id = "telegram-icon"></i></a>
                    </div>
                 </div>
     
-                <div class="box">
+                <div class="team-box">
                     <img src="styles/image/team3.jpg" alt="">
-                    <h4>Ersultan Boranbaev</h4>
+                    <h4>Yersultan Boranbayev</h4>
                     <h5>Developer</h5>
                     <div class = "icons">
-                        <a href=""><i class='bx bxl-telegram'></i></a>
+                        <a href=""><i class='bx bxl-telegram' id = "telegram-icon"></i></a>
                     </div>
                 </div>
     
-                    <div class="box">
+                    <div class="team-box">
                         <img src="styles/image/team1.jpg" alt="">
                         <h3>Alisher Samat</h3>
                         <h5>Developer</h5>
                         <div class = "icons">
-                            <a href=""><i class='bx bxl-telegram'></i></a>
+                            <a href=""><i class='bx bxl-telegram' id = "telegram-icon"></i></a>
                         </div>
                     </div>
         </div>  
     
     </section>
     
-    <div class="footerButtom">
-        <p>Copyright &copy;2024;</p>
-    </div>
+    <article class="footerButtom">
+        <p id = "copyright">Copyright &copy;2024;</p>
+    </article>
     
     </footer>
     

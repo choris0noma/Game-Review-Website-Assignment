@@ -2,24 +2,12 @@ body{
     font-family: Arial, sans-serif;
     margin: 60px;
     padding: 0;
-    background-color: #000000;
+    background-color: #4169E1;
     background-size: cover;
     background-attachment: fixed;
 }
 
-a {
-    text-decoration: none;
-    color: white
-}
-
-ul {
-    list-style: none;
-}
-
-main{
-    min-height: 100vh;
-}
-header {
+#main-header {
     background-color: #333;
     color: white;
     padding: 1em 0;
@@ -29,26 +17,35 @@ header {
     padding: 1em 2em;
 }
 
-header h1 {
+#main-header a{
+    text-decoration: none;
+    color: white
+}
+
+#main-header .main-title {
     margin: 0;
     font-size: 2em;
 }
 
-nav {
+#main-header .main-nav-list {
+    list-style: none;
+}
+
+.main-nav {
     background-color: transparent;
     position: static;
 }
 
-nav ul {
+.main-nav .main-nav-list {
     display: flex;
     justify-content: flex-end;
 }
 
-nav ul li {
+.main-nav .main-nav-list li {
     margin: 0;
 }
 
-nav ul li a {
+.main-nav .main-nav-list li a {
     display: block;
     padding: 1em 2em;
     text-decoration: none;
@@ -57,31 +54,40 @@ nav ul li a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
+.main-nav .main-nav-list li .main-nav-link:hover {
     background-color: #007BFF;
     color: #fff;
 }
 
 
-.content-container{
-  display: flex;
-  column-gap: 10px;
-}
-.news-container {
+/* Title  */
+
+.title-container {
     border-bottom: solid 3px #696969;
     padding-bottom: 30px;
 }
 
-.news-container h1{
+.title-container h1{
     color:#FFFAFA;
     margin: 20px;
 }
 
-.news-container p{
+.title-container p{
     color:#FFFAFA;
     margin: 8px;
     font-size: 20px;
 }
+
+
+/* All News */
+
+
+.all-news-container{
+    display: flex;
+    column-gap: 10px;
+}
+
+/* Game News Container */
 
 .game-news-container{
     border: solid 0.5px none;
@@ -92,15 +98,20 @@ nav ul li a:hover {
 
 }
 
+/* Game News */
+
 .game-news{
     display: flex;
     margin: 10px;
-}
-
-.game-news:hover{
     background-color: #6495ED;
     border-radius: 30px;
 }
+
+.game-news:hover{
+    transform: scale(1.02);
+}
+
+
 .game-news img{
     border-radius: 10px;
 }
@@ -126,33 +137,52 @@ nav ul li a:hover {
 }
 
 
-.topten-container{
+/* Top 10 Games */
+
+
+.topten-games-container{
     margin: 10px;
     border-radius: 20px;
     padding: 10px;
 }
 
 
-.topten-container h3{
+.topten-games-container .topten-word{
     color: #FFD700;
     font-size: 30px;
+    margin: 30px;
 }
 
-.topten-container ol li{
+
+.topten-games-container ol li{
     margin: 10px;
     color: #ffffff;
     font-size: 25px;
 }
 
-.topten-container ol li a {
+.topten-games-container ol li a {
     text-decoration: none;
     color: #ffffff;
 }
 
 
-.topten-container ol li a:hover{
-    color: #4169E1;
+.topten-games-container ol li a:hover{
+    color: #7FFFD4;
 }
+
+.topten-games-container .topten-games{
+    margin-bottom: 5px;
+    padding: 30px;
+    background-color: #4169E1;
+    border-radius: 20px;
+}
+
+.topten-games-container .topten-games:hover{
+    transform: scale(1.02);
+}
+
+
+/* Trailer */
 
 .game-trailer-container{
   display: flex;
@@ -167,12 +197,12 @@ nav ul li a:hover {
 
 .game-trailer{
     margin: 20px;
+    background-color: #6495ED;
+   border-radius: 14px;
+
 }
 
-.game-trailer:hover{
-   background-color: #6495ED;
-   border-radius: 14px;
-}
+
 
 .game-trailer-container h4{
     margin: 0;
@@ -186,21 +216,63 @@ nav ul li a:hover {
     font-size: 22px;
 }
 
-.comment-container{
-    display: flex;
+/* Time Icon */
+
+#time-icon {
+    color: red;
 }
 
-.comment-container h2{
+
+/* Question Content */
+
+
+.question-container{
+   display: block;
+   background-color: #6495ED;
+   width: 400px;
+   border-radius: 10px;
+   padding: 10px;
+}
+
+.question-container .question-word{
     color: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
 }
 
-.comment-container h2:hover{
-   background-color: #4169E1;
+
+.form-for-question{
+    display: inline;
+}
+.form-for-question #label-yes{
+    color: #ffffff;
+    font-size: 20px;
 }
 
-.team {
+.form-for-question #label-no{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.question-container #button{
+    font-size: 25px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color:#ffffff;
+    color: #000000;
+    background: transparent;
+    color: #ffffff;
+    margin-left: 100px;
+}
+
+.question-container #button:hover{
+    border: 3px solid #1b1229;
+    border-radius: 10px;
+}
+
+
+/* Our Team */
+
+
+.ourteam-container {
     position: relative;
     width: 97%;
     height: 500px;
@@ -232,19 +304,19 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-.center {
+.ourteam-word {
     color: #ffffff;
     font-size: 25px;
     text-align: center;
 }
-.box{
+.team-box{
     padding: 16px;
     background-color: #1b1229;
     border-radius: 15px;
     transition: all .38s ease;
 }
 
-.box h3{
+.team-box h3{
     font-size: 23px;
     font-weight: 600;
     color: #ffffff;
@@ -252,7 +324,7 @@ nav ul li a:hover {
 
 }
 
-.box h4{
+.team-box h4{
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
@@ -260,7 +332,7 @@ nav ul li a:hover {
 
 }
 
-.box h5{
+.team-box h5{
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -269,7 +341,7 @@ nav ul li a:hover {
 
 }
 
-.icons i {
+.icons #telegram-icon{
    display: inline-block;
    color: #ffffff;
    font-size: 20px;
@@ -277,11 +349,11 @@ nav ul li a:hover {
    transition: all .38s ease; 
 }
 
-.icons i:hover{
+.icons #telegram-icon:hover{
     transform: scale(1.2);
 }
 
-.box:hover{
+.team-box:hover{
     transform: translateY(-10px);
     cursor: pointer;
 }
@@ -293,6 +365,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.footerButtom p{
+.footerButtom #copyright{
     color: #ffffff;
 }
