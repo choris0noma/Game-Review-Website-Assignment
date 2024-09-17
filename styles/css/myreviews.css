@@ -1,0 +1,263 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-section {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+/* Navigation Styling */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+
+/* Review Section */
+.game-review {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.section-heading {
+    margin: 0 0 10px 0;
+    color: #096360;
+    font-family: 'Lora', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.section-heading2 {
+    margin: 0 0 10px 0;
+    color: #649509;
+    font-family: 'Lora', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.paragraph-text {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: left;
+}
+
+.ourteam-container {
+    position: relative;
+    width: 97%;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.team-container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.team-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.ourteam-word {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+}
+.team-box{
+    padding: 16px;
+    background-color: #1b1229;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.team-box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+
+}
+
+.icons #telegram-icon{
+   display: inline-block;
+   color: #ffffff;
+   font-size: 20px;
+   margin: 0 8px;
+   transition: all .38s ease; 
+}
+
+.icons #telegram-icon:hover{
+    transform: scale(1.2);
+}
+
+.team-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.footerButtom{
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerButtom #copyright{
+    color: #ffffff;
+}
+/* Flexbox Container for Main Content */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Flexbox for Navigation */
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Spacing (Box Model) */
+.header-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+#content-wrapper {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+/* Flexbox for Review Cards */
+.review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.review-card {
+    flex: 1 1 calc(33% - 20px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Control Width */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Image Styling */
+.image-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

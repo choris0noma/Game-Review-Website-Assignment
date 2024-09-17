@@ -1,0 +1,257 @@
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #28a745;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --footer-bg-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.paragraph-text {
+    text-align: center;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header-background {
+    background-color: var(--footer-bg-color); 
+    padding: 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    color: white;
+}
+
+.header-logo {
+    color: white; 
+    text-decoration: none;
+}
+
+.header-logo:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--primary-color);
+}
+
+.ourteam-container {
+    position: relative;
+    width: 97%;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.team-container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.team-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.ourteam-word {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+}
+.team-box{
+    padding: 16px;
+    background-color: #1b1229;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.team-box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+
+}
+
+.icons #telegram-icon{
+   display: inline-block;
+   color: #ffffff;
+   font-size: 20px;
+   margin: 0 8px;
+   transition: all .38s ease; 
+}
+
+.icons #telegram-icon:hover{
+    transform: scale(1.2);
+}
+
+.team-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.footerButtom{
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerButtom #copyright{
+    color: #ffffff;
+}
+
+.featured-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.image-thumbnail {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.numbers-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.number-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    border-radius: 10px;
+}
+
+.number-box.green {
+    background-color: var(--secondary-color);
+}
+
+.number-box.yellow {
+    background-color: #ffc107;
+}
+
+.number-box.red {
+    background-color: #dc3545;
+}
+.level-up-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 0 10px;
+}
+h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto;
+}
+
+a:focus, button:focus {
+    outline: 3px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
