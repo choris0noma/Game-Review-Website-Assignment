@@ -46,19 +46,100 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #007BFF;
 }
-footer {
+footer{
     background-image: linear-gradient(to right, #434343 20%, black 100%);
+
+}
+.ourteam-container {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 50px;
     text-align: center;
-    padding: 2em 0;
-    background-color: #333;
-    color: white;
-    font-size: 1.1em;
+    margin-top: 10px;
+
 }
-.our-names li {
-    text-align: left;
-    margin: 10px;
+
+.team-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
-footer a:hover {
-    color: #007BFF;
-    text-decoration: underline;
+
+.ourteam-word {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+}
+.team-box{
+    padding: 16px;
+    background-color: #1b1229;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.team-box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.team-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+
+}
+
+.icons #telegram-icon{
+   display: inline-block;
+   color: #ffffff;
+   font-size: 20px;
+   margin: 0 8px;
+   transition: all .38s ease; 
+}
+
+.icons #telegram-icon:hover{
+    transform: scale(1.2);
+}
+
+.team-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.copyrights{
+    padding: 20px;
+    text-align: center;
+}
+
+.copyrights #copyright{
+    color: #ffffff;
+
 }
