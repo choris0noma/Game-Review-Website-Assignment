@@ -5,116 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/css/header-footer.css">
     <link rel="stylesheet" href="styles/css/all_games.css">
+    <script defer src="js/time.js"></script>
 </head>
 
 <body>
     <header>
-        <h1><a href="index.html">Game Review</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Main Page</a></li>
-                <li><a href="all_games.html">All Games</a></li>
-                <li><a href="myreviews.html">My Reviews</a></li>
-                <li><a href="news.html">News</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Game Review</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="all_games.html">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="myreviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">News</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="filter">
+        <section class="filter container">
             <h2>Filter Options</h2>
-            <div class="search-bar">
-                <label for="site-search">Search:</label>
-                <input type="search" id="site-search" name="q" />
-                <button>Search</button>
-            </div>
-            <div class="filter-group">
-                <h3>Genre</h3>
-                <label><input type="checkbox" name="genre" value="action"> Action</label>
-                <label><input type="checkbox" name="genre" value="adventure"> Adventure</label>
-                <label><input type="checkbox" name="genre" value="rpg"> RPG</label>
-                <label><input type="checkbox" name="genre" value="Shooter"> Shooter</label>
-                <label><input type="checkbox" name="genre" value="Platformer"> Platformer</label>
-                <label><input type="checkbox" name="genre" value="Strategy"> Strategy</label>
-                <label><input type="checkbox" name="genre" value="Sports"> Sports</label>
-                <label><input type="checkbox" name="genre" value="Stealth"> Stealth</label>
-                <label><input type="checkbox" name="genre" value="Survival"> Survival</label>
-                <label><input type="checkbox" name="genre" value="Visual Novel"> Visual Novel</label>
-                <label><input type="checkbox" name="genre" value="Rhythm"> Rhythm</label>
-            </div>
-            <div class="filter-group">
-                <h3>Platform</h3>
-                <label><input type="checkbox" name="platform" value="pc"> PC</label>
-                <label><input type="checkbox" name="platform" value="console"> Console</label>
-                <label><input type="checkbox" name="platform" value="mobile"> Mobile</label>
-            </div>
-            <div class="filter-group">
-                <h3>Release Date</h3>
-                <label><input type="checkbox" name="Release Date" value="Last 30 Days"> Last 30 Days</label>
-                <label><input type="checkbox" name="Release Date" value="Last 6 Months"> Last 6 Months</label>
-                <label><input type="checkbox" name="Release Date" value="Last Year"> Last Year</label>
-                <label><input type="checkbox" name="Release Date" value="Older than 1 Year"> Older than 1 Year</label>
-                <label><input type="checkbox" name="Release Date" value="Upcoming Games"> Upcoming Games</label>
-            </div>
-            <div class="filter-group"></div>
-                <h3>Game Mode</h3>
-                <label><input type="checkbox" name="Game Mode" value="Single-player"> Single-player</label>
-                <label><input type="checkbox" name="Game Mode" value="Multiplayer"> Multiplayer</label>
-                <label><input type="checkbox" name="Game Mode" value="Co-op"> Co-op</label>
-            </div>
-            <div class="filter-group"></div>
-                <h3>Price Range</h3>
-                <label><input type="checkbox" name="Game Mode" value="Free-to-play"> Free-to-play</label>
-                <label><input type="checkbox" name="Game Mode" value="$10 - $30"> $10 - $30</label>
-                <label><input type="checkbox" name="Game Mode" value="$30 - $60"> $30 - $60</label>
-                <label><input type="checkbox" name="Game Mode" value="Over $60">Over $60</label>
-            </div>
-        </section>
-        <section class="games">
-            <div class="grid">
-                <div class="small-game-window">
-                    <img src="images/game1.jpeg" alt="Lethal Company">
-                    <h3>Lethal Company</h3>
+            <h6 id = "time"></h6>
+            <form class="form">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="filter-group">
+                        <h3>Genre</h3>
+                        <label><input type="checkbox" name="genre" value="action"> Action</label>
+                        <label><input type="checkbox" name="genre" value="adventure"> Adventure</label>
+                        <label><input type="checkbox" name="genre" value="rpg"> RPG</label>
+                        <label><input type="checkbox" name="genre" value="shooter"> Shooter</label>
+                        <label><input type="checkbox" name="genre" value="platformer"> Platformer</label>
+                    </div>
                 </div>
-                <div class="small-game-window">
-                    <img src="images/game2.jpg" alt="Call Of Duty">
-                    <h3>Call Of Duty</h3>
+                <div class="col-md-6">
+                    <div class="filter-group">
+                        <h3>Platform</h3>
+                        <label><input type="checkbox" name="platform" value="pc"> PC</label>
+                        <label><input type="checkbox" name="platform" value="console"> Console</label>
+                        <label><input type="checkbox" name="platform" value="mobile"> Mobile</label>
+                    </div>
                 </div>
-                <div class="small-game-window">
-                    <img src="images/game3.jpg" alt="Elden Ring">
-                    <h3>Elden Ring</h3>
+                <div class="col-md-6">
+                    <div class="filter-group">
+                        <h3>Release Date</h3>
+                        <label><input type="checkbox" name="release-date" value="last-30-days"> Last 30 Days</label>
+                        <label><input type="checkbox" name="release-date" value="last-6-months"> Last 6 Months</label>
+                    </div>
                 </div>
-                <div class="small-game-window">
-                    <img src="images/game4.jpg" alt="Baldur's Gate">
-                    <h3>Baldur's Gate</h3>
+                <div class="col-md-6">
+                    <div class="filter-group">
+                        <h3>Game Mode</h3>
+                        <label><input type="checkbox" name="game-mode" value="single-player"> Single-player</label>
+                        <label><input type="checkbox" name="game-mode" value="multiplayer"> Multiplayer</label>
+                    </div>
                 </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
-                </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
-                </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
-                </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
-                </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
-                </div>
-                <div class="small-game-window">
-                    <img src="images/game5.jpeg" alt="Red Dead Redemption 2">
-                    <h3>Red Dead Redemption 2</h3>
+                <div class="col-md-6">
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <label><input type="checkbox" name="price-range" value="free-to-play"> Free-to-play</label>
+                        <label><input type="checkbox" name="price-range" value="$10-$30"> $10 - $30</label>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="games container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game1.jpeg" alt="Lethal Company" class="img-fluid">
+                        <h3>Lethal Company</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game2.jpg" alt="Call Of Duty" class="img-fluid">
+                        <h3>Call Of Duty</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="small-game-window">
+                        <img src="images/game3.jpg" alt="Elden Ring" class="img-fluid">
+                        <h3>Elden Ring</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game4.jpg" alt="Baldur's Gate" class="img-fluid">
+                        <h3>Baldur's Gate</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
+                        <h3>RDR 2</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
+                        <h3>RDR 2</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="small-game-window">
+                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
+                        <h3>RDR 2</h3>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        
     </main>
     <footer id = "footer-container">
     

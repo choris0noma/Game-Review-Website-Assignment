@@ -1,7 +1,5 @@
-/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;500&display=swap');
 
-/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -44,35 +42,7 @@ main {
     font-weight: 700;
 }
 
-/* Navigation Styling */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-}
 
-.nav-menu li {
-    margin: 0 10px;
-}
-
-.nav-menu li a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-menu li a:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-
-/* Review Section */
 .game-review {
     background-color: white;
     padding: 20px;
@@ -200,7 +170,6 @@ main {
 .footerButtom #copyright{
     color: #ffffff;
 }
-/* Flexbox Container for Main Content */
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -210,14 +179,12 @@ main {
     padding: 20px;
 }
 
-/* Flexbox for Navigation */
 .flex-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Spacing (Box Model) */
 .header-section {
     padding: 20px;
     margin-bottom: 20px;
@@ -232,7 +199,6 @@ main {
     border: 1px solid #ddd;
 }
 
-/* Flexbox for Review Cards */
 .review-cards {
     display: flex;
     flex-wrap: wrap;
@@ -248,13 +214,11 @@ main {
     background-color: white;
 }
 
-/* Control Width */
 img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-/* Image Styling */
 .image-thumbnail {
     max-width: 100%;
     height: auto;
