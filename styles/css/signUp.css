@@ -85,6 +85,7 @@ button:hover {
   top: 10%;
   left: 40%;
   background-color: rgba(0, 0, 0, 0.5);
+  color: black;
   justify-content: center;
   align-items: center;
   z-index: 1000;
