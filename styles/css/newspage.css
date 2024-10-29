@@ -1,12 +1,11 @@
 body{
-    font-family: Arial, sans-serif;
-    padding: 0;
-    background-color: #4169E1;
     background-size: cover;
     background-attachment: fixed;
+    transition: .2s;
 }
 
-#main-header {
+.main-header {
+    margin: 0;
     background-color: #333;
     color: white;
     padding: 1em 0;
@@ -16,17 +15,17 @@ body{
     padding: 1em 2em;
 }
 
-#main-header a{
+.main-header a{
     text-decoration: none;
-    color: white
+    color: white;
 }
 
-#main-header .main-title {
+.main-header .navbar-brand {
     margin: 0;
     font-size: 2em;
 }
 
-#main-header .main-nav-list {
+.main-header .nav-list {
     list-style: none;
 }
 
@@ -35,16 +34,16 @@ body{
     position: static;
 }
 
-.main-nav .main-nav-list {
+.main-nav .nav-list {
     display: flex;
     justify-content: flex-end;
 }
 
-.main-nav .main-nav-list li {
+.main-nav .nav-list li {
     margin: 0;
 }
 
-.main-nav .main-nav-list li a {
+.main-nav .nav-list li a {
     display: block;
     padding: 1em 2em;
     text-decoration: none;
@@ -53,7 +52,7 @@ body{
     transition: background-color 0.3s, color 0.3s;
 }
 
-.main-nav .main-nav-list li .main-nav-link:hover {
+.main-nav .nav-list li .nav-link:hover {
     background-color: #007BFF;
     color: #fff;
 }
@@ -62,20 +61,203 @@ body{
 /* Title  */
 
 .title-container {
-    border-bottom: solid 3px #696969;
+    display: flex;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
     padding-bottom: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .title-container h1{
-    color:#FFFAFA;
-    margin: 20px;
+    color: white;
+    padding: 10px;
+   
 }
 
 .title-container p{
-    color:#FFFAFA;
+    color: white;
     margin: 8px;
     font-size: 20px;
 }
+
+.title-container input{
+    display: none;
+}
+
+/* News Filter  */
+
+.items-links{
+    width: 100%;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+}
+
+.items-link{
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .4s ease;
+
+}
+
+.items-link:hover{
+    background: #007BFF;
+    color: #fff;
+    
+}
+.menu-active{
+    background: #007BFF;
+    color: #fff;
+}
+
+/* Current Date */
+
+
+#current-date-btn{
+    position: absolute;
+    right: 2%;
+    font-size: 17px;
+    height: 30px;
+    margin: 15px;
+    margin-right: 40px;
+    border-radius: 3px ;
+    color: #ffffff;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+#current-date-btn:hover{
+    background-color: #696969;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.current-date-text{
+   position: absolute;
+   right: 1%;
+   top: 32%;
+   font-size: 20px;
+   color: #ffffff;
+
+}
+
+.cancele{
+    position: absolute;
+    right: 2%;
+    top: 11%;
+    color: #ffffff;
+    background: transparent;
+    display: none;
+}
+
+.cancele:hover{
+    background-color: #696969;
+}
+
+
+/* Dark and Light Mode */
+
+.toggle{
+    position: absolute;
+    right: 1%;
+    top: 63%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 115px;
+    height: 48px;
+    border-radius: 50px;
+    transition: .2s ;
+}
+
+.toggle i {
+    margin-top: 4px;
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1,
+    
+
+}
+
+.toggle .ball {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    margin: 7.5px;
+    border-radius: 50%;
+    transition: .3s ease-out;
+    margin-bottom: 4px;
+
+}
+
+
+.light{
+    
+}
+
+.light .toggle{
+    background: linear-gradient(145deg, #FFFFFF, #FFF5EE);
+    box-shadow: 2px 1px 2px #e6e6e6,
+               -1px -1px 1px #ffffff;
+ 
+}
+
+.light .toggle .bxs-sun {
+    color: #fafafafa;
+
+}
+
+.light .toggle .bx-moon{
+    color: #000000
+}
+
+.light .toggle .ball{
+    background: #151d2a;
+}
+
+
+
+.dark {
+    background: #151d2a;
+
+}
+
+.dark .toggle{
+    background: #151d2a;
+    box-shadow: 3px 3px 3px #0e131b,
+               -3px -3px 3px #1c2739;
+ 
+}
+
+.dark .toggle .bx-sun {
+    color: #fafafa;
+}
+
+.dark .toogle .bxs-moon{
+    color: #151d2a;
+}
+
+.dark .toggle .ball{
+    background: #fafafa;
+    transform: translateX(60px);
+}
+
 
 
 /* All News */
@@ -84,7 +266,9 @@ body{
 .all-news-container{
     display: flex;
     column-gap: 10px;
+    justify-self: center;
 }
+
 
 /* Game News Container */
 
@@ -93,17 +277,18 @@ body{
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
-   margin-right: 200px;
-
 }
 
 /* Game News */
 
-.game-news{
+.game-news{ 
+    overflow: hidden;
     display: flex;
-    margin: 10px;
-    background-color: #6495ED;
+    margin: 5px;
+    background: transparent;
+    backdrop-filter: blur(20px);
     border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, .2);
 }
 
 .game-news:hover{
@@ -113,6 +298,7 @@ body{
 
 .game-news img{
     border-radius: 10px;
+    padding: 12px;
 }
 
 .game-news h2 {
@@ -136,56 +322,11 @@ body{
 }
 
 
-/* Top 10 Games */
-
-
-.topten-games-container{
-    margin: 10px;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-
-.topten-games-container .topten-word{
-    color: #FFD700;
-    font-size: 30px;
-    margin: 30px;
-}
-
-
-.topten-games-container ol li{
-    margin: 10px;
-    color: #ffffff;
-    font-size: 25px;
-}
-
-.topten-games-container ol li a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-
-.topten-games-container ol li a:hover{
-    color: #7FFFD4;
-}
-
-.topten-games-container .topten-games{
-    margin-bottom: 5px;
-    padding: 30px;
-    background-color: #4169E1;
-    border-radius: 20px;
-}
-
-.topten-games-container .topten-games:hover{
-    transform: scale(1.02);
-}
-
-
 /* Trailer */
 
 .game-trailer-container{
   display: flex;
-  border-top: solid 3px #696969;
+  border-top: solid 3px #000000;
   overflow-x: auto;
 }
 
@@ -195,13 +336,13 @@ body{
 }
 
 .game-trailer{
-    margin: 20px;
-    background-color: #6495ED;
+   margin: 20px;
+   background: transparent;
+   backdrop-filter: blur(20px);
+   border: 2px solid rgba(255, 255, 255, .2);
    border-radius: 14px;
 
 }
-
-
 
 .game-trailer-container h4{
     margin: 0;
@@ -222,50 +363,281 @@ body{
 }
 
 
-/* Question Content */
+/* Login  */
 
 
-.question-container{
-   display: block;
-   background-color: #6495ED;
-   width: 400px;
-   border-radius: 10px;
-   padding: 10px;
-}
+.login-all-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.question-container .question-word{
-    color: #ffffff;
 }
 
 
-.form-for-question{
-    display: inline;
-}
-.form-for-question #label-yes{
-    color: #ffffff;
-    font-size: 20px;
-}
-
-.form-for-question #label-no{
-    color: #ffffff;
-    font-size: 20px;
-}
-
-.question-container #button{
-    font-size: 25px;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    background-color:#ffffff;
-    color: #000000;
+.login-container{
+    width: 420px;
     background: transparent;
+    border: 3px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #ffffff;
-    margin-left: 100px;
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-.question-container #button:hover{
-    border: 3px solid #1b1229;
-    border-radius: 10px;
+.login-container h1{
+    font-size: 36px;
+    text-align: center;
 }
+
+.login-container .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0 ;
+
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+    color: #ffffff;
+}
+
+
+#lock-1{
+    position: absolute;
+    right: 16%;
+    top: 32%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#lock-2{
+    position: absolute;
+    right: 16%;
+    top: 52%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.login-container .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+
+.remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 3px;
+}
+
+
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.login-container .submit-btn{
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+
+}
+
+
+.login-container .register-account{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px 0 15px;
+}
+
+.register-account button{
+    border: 0;
+    background: transparent;
+}
+
+.register-account p a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.register-account p a:hover{
+    text-decoration: underline;
+}
+
+.popupClass{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50% ) scale(1);
+}
+
+
+
+.popupClass img{
+    width: 100px;
+    margin-top: -10%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupClass h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popupClass button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer ;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Register */
+
+
+.register-container{
+    width: 420px;
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    top: 10%;
+    left: 34%;
+}
+
+
+.register-container h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.register-container .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0 ;
+
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+    color: #ffffff;
+}
+
+
+#lock-1{
+    position: absolute;
+    right: 16%;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#lock-3{
+    position: absolute;
+    right: 16%;
+    top: 69%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#lock-4{
+    position: absolute;
+    right: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+
+
+.register-container .submit-btn{
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+
+}
+
+
 
 
 /* Our Team */
@@ -281,6 +653,7 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    margin-top: 10px;
 }
 
 .team-container{
@@ -359,7 +732,6 @@ body{
 
 .footerButtom{
     background-color: #333;
-    border-radius: 20px;
     padding: 20px;
     text-align: center;
 }
@@ -367,3 +739,12 @@ body{
 .footerButtom #copyright{
     color: #ffffff;
 }
+
+
+
+@media (max-width: 830px){
+    .game-news-container{
+        font-size: 5px;
+    }
+}
+

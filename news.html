@@ -5,31 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/css/newspage.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>News</title>
 </head>
 
-          
-<body>
+<body background="styles/image/main-back-img.jpg" class = "light">
 
-    <header id = "main-header">
-        <h1 class = "main-title"><a href="index.html">Game Review</a></h1>
-        <nav class = "main-nav">
-            <ul class = "main-nav-list">
-                <li><a href="index.html" class = "main-nav-link">Main Page</a></li>
-                <li><a href="all_games.html" class = "main-nav-link" >All Games</a></li>
-                <li><a href="myreviews.html" class = "main-nav-link">My Reviews</a></li>
-                <li><a href="news.html" class = "main-nav-link">News</a></li>
+    <header class = "main-header">
+        <h1 class = "navbar-brand"><a href="index.html">Game Review</a></h1>
+        <nav class = "main-nav nav-dark bg-muted">
+            <ul class = "nav-list">
+                <li><a href="index.html" class = "nav-link">Main Page</a></li>
+                <li><a href="all_games.html" class = "nav-link" >All Games</a></li>
+                <li><a href="myreviews.html" class = "nav-link">My Reviews</a></li>
+                <li><a href="news.html" class = "nav-link">News</a></li>
             </ul>
         </nav>
     </header>
 
        <!-- Title -->
 
-    <section class="title-container">
-        <h1>Game News</h1>
-        <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p>
-    </section>
+    <div class="title-container">
+        <h1>Game News<br>
+        <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p> </h1>
+        <button type  = "button"  id = "current-date-btn"  onclick = "currentDate(); canceleDate()" onmousedown =  "audio2.play()" >Current Date</button>
+        <button type = "button" class = "cancele" id = "cancele" onclick= "removeDate()"><i class='bx bx-x'></i></button>
+        <label class = "current-date-text" id = "current-date-text"></label>
+
+        <input type="checkbox" class = "toggle-check" id = "toggle" >
+        <label class = "toggle" for="toggle" >
+            <i class='bx bxs-sun' ></i>
+            <i class='bx bx-moon'></i>
+            <span class = "ball"></span>
+        </label>
+
+
+    </div>  
+
+
+<div class = "items-links">
+
+    <span class = "items-link menu-active" data-name="all">All</span>
+    <span class = "items-link" data-name="playstation5">PlayStation5</span>
+    <span class = "items-link" data-name="xbox">XBox</span>
+    <span class = "items-link" data-name="pc">PC</span>
+    <span class = "items-link" data-name="mobile">Mobile</span>
+
+</div>
 
 
     <!-- All News -->
@@ -38,39 +60,68 @@
 
 <article class = "game-news-container">
 
-<div class = "game-news">
-    <img src="styles/image/destiny-2-launch-art-feature.avif" width="290" height="240">
+
+    <div class="row 
+    justify-content-center">
+
+
+       <div class="col-9">
+
+<div class = "game-news" data-name="pc">
+    <img src="styles/image/destiny-2-img1.avif" alt="destiny-2-image" width="290" height="240">
     <h2><a href="news1.html"><span>Destiny 2 Has Hit a New Low</span></a>
     <p>Steam charts confirm that Destiny 2 has hit a new low which may suggest that The Final Shape doesn't have the staying power of other expansions.</p>
     <p><i class='bx bx-time-five' id = "time-icon"></i> <span>5 days ago </span></p>
     </h2>
 </div>
 
-<div class = "game-news">
-    <img src="styles/image/astro-bot-header.avif" width="290" height="240">
+      </div> 
+
+
+      <div class="col-9">
+
+<div class = "game-news" data-name="playstation5">
+    <img src="styles/image/astro-bot-img1.avif"  alt = "astro-bot-image" width="290" height="240">
     <h2><a href="news2.html"><span>Astro's Playroom Celebrated Astro Bot's Debut in an Amazing Way</span></a>
     <p>Astro Bot just launched, but Team Asobi hasn't forgotten Astro's Playroom, as gamers find an awesome detail in the previous Astro title.</p>
     <p><i class='bx bx-time-five' id = "time-icon"></i> <span>1 day ago</span></p>
     </h2>
 </div>
 
-<div class = "game-news">
-    <img src="styles/image/honkai-star-rail.avif" width="290" height="240">
+       </div>
+
+
+
+       <div class="col-9">
+
+<div class = "game-news" data-name="xbox">
+    <img src="styles/image/honkai-img1.avif" alt = "honkai-image" width="290" height="240">
     <h2> <a href="news3.html"><span>Honkai: Star Rail Leaks New Path</span></a>
     <p>Honkai: Star Rail leaks are teasing the addition of a new playable Path to the game, the first new class added since the RPG's release.</p>
     <p><i class='bx bx-time-five' id = "time-icon"></i> <span>10 hours ago</span></p>
     </h2>
 </div>
 
-<div class = "game-news">
+     </div>
+
+
+     <div class="col-9">
+
+<div class = "game-news" data-name="playstation5">
     <img src="styles/image/astro-bot-logo.avif" width="290" height="240">
     <h2><a href="news4.html"><span>Astro Bot Hints at More Post-Launch Cameos</span></a>
-    <p>Some newly surfaced evidence suggests that even more cameos from many famous video game characters could be coming to Astro Bot in the future.</p>
+    <p> Some newly surfaced evidence suggests that even more cameos from many famous video game characters could be coming to Astro Bot in the future.</p>
     <p><i class='bx bx-time-five' id = "time-icon"></i> <span>1 hour ago</span></p>
     </h2>
 </div>
 
-<div class = "game-news">
+    </div>
+
+
+
+    <div class="col-9">
+
+<div class = "game-news" data-name="pc">
     <img src="styles/image/harry-potter.avif" width="290" height="240">
     <h2> <a href="#"><span>Harry Potter: Quidditch Champions Hosting Special Event This Weekend</span> </a>
     <p>Unbroken Studios' Harry Potter: Quidditch Champions launches a special weekend event geared toward commemorating its recent release.</p>
@@ -78,8 +129,11 @@
     </h2>
 </div>
 
+     </div>
 
-<div class = "game-news">
+   <div class="col-9">
+
+   <div class = "game-news" data-name="xbox">
     <img src="styles/image/genshin-impact.avif" width="290" height="240">
     <h2><a href="#"><span>Genshin Impact Leak Teases Major Upcoming Event</span></a>
     <p>A new Genshin Impact leak is hinting at the return of one of the game's most popular recurring events, set to arrive in an upcoming update.</p>
@@ -87,7 +141,13 @@
     </h2>
 </div>
 
-<div class = "game-news">
+   </div>
+
+
+
+   <div class="col-9">
+
+<div class = "game-news" data-name="pc">
     <img src="styles/image/battlefield-2042.avif" width="290" height="240">
     <h2><a href="#"><span>Battlefield 2042 Reveals Patch Notes for September 2024 Update</span></a>
     <p>EA reveals the official patch notes for Battlefield 2042's upcoming September 2024 update, which will bring a few changes to the first-person shooter.</p>
@@ -95,7 +155,13 @@
     </h2>
 </div>
 
-<div class = "game-news">
+     </div>
+
+
+
+     <div class="col-9">
+
+<div class = "game-news" data-name="mobile">
     <img src="styles/image/freefire.jpg" width="290" height="240">
     <h2><a href="#"><span>Free Fire Kicks Off Its 7Th Anniversary Celebrations</span></a>
     <p>Free Fire is celebrating its seventh anniversary, and players are invited to join in the festivities starting tomorrow!</p>
@@ -103,7 +169,13 @@
     </h2>
 </div>
 
-<div class = "game-news">
+    </div>
+
+
+
+    <div class="col-9">
+
+<div class = "game-news" data-name="playstation5" data-name="pc">
     <img src="styles/image/gta6.avif" width="290" height="240">
     <h2> <a href="#"><span>Rockstar Reportedly Tried Lowballing Band for GTA 6 Song</span> </a>
     <p>Rockstar reportedly tried lowballing an established band for indefinite rights to use one of their songs in Grand Theft Auto 6.</p>
@@ -111,7 +183,13 @@
     </h2>
 </div>
 
-<div class = "game-news">
+    </div>
+
+
+
+    <div class = "col-9">
+
+<div class = "game-news" data-name="mobile">
     <img src="styles/image/Spongebob_Event_.webp" width="290" height="240">
     <h2> <a href="#"><span>How to get Spongebob El Primo for FREE!</span> </a>
     <p>You will be able to get SpongeBob El Primo FOR FREE! Collect Krusty Kash to get SpongeBob Skins, Power-Ups, and more!</p>
@@ -119,69 +197,16 @@
     </h2>
 </div>
 
+      </div>
+
+
+</div>
+
 </article>
 
-
-<!-- Top 10 Games  -->
-
-<article class="topten-games-container">
-    <h3 class = "topten-word">Top 10 Games This Year</h3>
-<ol>
-
-    <article class = "topten-games">
-    <li><a href="https://store.steampowered.com/app/2778580/ELDEN_RING_Shadow_of_the_Erdtree/" target="_blank">Elden Ring: Shadow of the Erdtree </a></li>
-    <img src="styles/image/EldenRing.jpg" alt="#" width="150" height="150">
-    </article>
-
-    <article class = "topten-games">
-    <li><a href="https://www.playstation.com/en-us/games/astro-bot/" target="_blank">Astro Bot</a></li>
-    <img src="styles/image/astrobot.jpeg" alt="#" width="150" height="150">
-   </article>
-
-   <article class = "topten-games">
-    <li><a href="https://ffvii.square-enix-games.com/en-us/games/rebirth" target="_blank">Final Fantasy VII Rebirth</a></li>
-    <img src="styles/image/finalfantasy.avif" alt="#" width="150" height="150">
-  </article>
-
-    <article class = "topten-games">
-    <li><a href="https://store.steampowered.com/app/813230/ANIMAL_WELL/" target="_blank">Animal Well</a></li>
-    <img src="styles/image/animalwell.jpg" alt="#" width="150" height="150">
-   </article>
-
-    <article class = "topten-games">
-    <li><a href="https://store.steampowered.com/app/2379780/Balatro/" target="_blank">Balatro</a></li>
-    <img src="styles/image/balatro.avif" alt="#" width="150" height="150">
-    </article>
-
-    <article class = "topten-games">
-    <li><a href="https://www.playstation.com/en-us/games/the-last-of-us-part-ii-remastered/" target="_blank">The Last of Us Part II Remastered</a></li>
-    <img src="styles/image/thelastofus.jpeg" alt="#" width="150" height="150">
-    </article>
-
-    <article class = "topten-games">
-    <li><a href="https://thankgoodness.game/" target="_blank"> Thank Goodness You're Here!</a></li>
-    <img src="styles/image/thankgoodness.avif" alt="#" width="150" height="150">
-    </article>
-
-    <article class = "topten-games">
-    <li><a href="https://en.bandainamcoent.eu/tekken/tekken-8" target="_blank">Tekken 8</a></li>
-    <img src="styles/image/tekken8.jpg" alt="#" width="150" height="150">
-   </article>
-
-   <article class = "topten-games">
-    <li><a href="https://store.steampowered.com/app/2336880/Destiny_2_The_Final_Shape/" target="_blank">Destiny 2: The Final Shape</a></li>
-    <img src="styles/image/destiny2.jpg" alt="#" width="150" height="150">
-   </article>
-
-   <article class = "topten-games">
-    <li><a href="http://www.tsukihime-en.com/" target="_blank">Tsukihime: A Piece of Blue Glass Moon</a></li>
-    <img src="styles/image/Tsukihime_blue_glass_cover.webp" alt="#" width="150" height="150" >
-</article>
-
-</ol>
-</article>
 
 </section>
+
 
 <!-- Trailer -->
 
@@ -232,23 +257,56 @@
 </section>
 
 
-<!-- Question Content -->
-
-<article class="question-container">
-
-    <h2 class="question-word">Do you have a fun to read this ?</h2>
+<!-- Login -->
 
 
-    <form action="" class = "form-for-question" >
+<section class = "login-all-container">
 
-        <input type="radio" id = "answer-yes">
-        <label for="yes" id="label-yes">Yes</label> 
-        <input type="radio" id = "answer-no">
-        <label for="no" id="label-no">No</label>
-        <button type = "button" id = "button">Submit</button>
+
+<div class = "login-container">
+
+    <form action="">
+        <h1>Login</h1>
+        <div class = "input-box">
+            <input type="text" placeholder= "Email" id = "email" required>
+            <i class='bx bxs-user' id = "lock-1"></i>
+        </div>
+        <div class = "input-box">
+            <input type="password" placeholder= "Password" id = "password" required>
+            <i class='bx bxs-lock-alt' id = "lock-2"></i>
+        </div>
+
+        <div class = "remember-forgot">
+            <label><input type = "checkbox">Remember me</label>
+            <a href="#">Forgot password</a>
+            
+        </div>
+
+        <button type="button" class = "submit-btn" onclick=" checkUser()", onmousedown =  "audio1.play()">Login</button>
+
+
+        <div class = "popupClass" id = "popup">
+            <img src="styles/image/accept.png" alt="accept-image">
+            <h2 id = "for-username">Thank you!</h2>
+            <p>You loginned succesfully !</p>
+            <button type = "button" onclick = "closePopup()">Ok</button>
+        </div>
+
+        <div class = "register-account">
+            <p>Do not have an account ? 
+                <button  type = "button"><a href="register.html">Register</a></button>
+            </p>
+        </div>
+
     </form>
 
-</article>
+</div>
+
+
+
+
+</section>
+
 
 
 <!-- Footer -->
@@ -258,14 +316,11 @@
     
     <section class = "ourteam-container">
 
-   
-
-
     <div class="team-container">
 
 
         <div class="team-box">
-            <img src="styles/image/team2.jpg" alt="">
+            <img src="styles/image/team2.jpg" alt="team2-img    ">
             <h3>Danial Makhmud</h3>
             <h5>Developer</h5>
             <div class = "icons">
@@ -274,8 +329,8 @@
             </div>
 
             <div class="team-box">
-                <img src="styles/image/team3.jpg" alt="">
-                <h4>Ersultan Boranbaev</h4>
+                <img src="styles/image/team3.jpg" alt="team3-img">
+                <h4>Yersultan Boranbayev</h4>
                 <h5>Developer</h5>
                 <div class = "icons">
                     <a href=""><i class='bx bxl-telegram' id = "telegram-icon"></i></a>
@@ -283,7 +338,7 @@
             </div>
 
                 <div class="team-box">
-                    <img src="styles/image/team1.jpg" alt="">
+                    <img src="styles/image/team1.jpg" alt="team1-img">
                     <h3>Alisher Samat</h3>
                     <h5>Developer</h5>
                     <div class = "icons">
@@ -299,6 +354,9 @@
 </article>
 
 </footer>
+
+
+<script src="js/news.js"></script>
 
 
 </body>

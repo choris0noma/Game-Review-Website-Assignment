@@ -7,68 +7,155 @@
     <title>Game Review</title>
     <link rel="stylesheet" href="styles/css/news3.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <body>
+<body background="styles/image/main-back-img.jpg" class="light">
 
-        <header id = "main-header">
-            <h1 class = "main-title"><a href="index.html">Game Review</a></h1>
+        <header class = "main-header">
+            <h1 class = "navbar-brand "><a href="index.html">Game Review</a></h1>
+
+            <input type="checkbox" class = "toggle-check" id = "toggle" >
+            <label class = "toggle" for="toggle" >
+                <i class='bx bxs-sun' ></i>
+                <i class='bx bx-moon'></i>
+                <span class = "ball"></span>
+            </label>
+
             <nav class = "main-nav">
-                <ul class = "main-nav-list">
-                    <li><a href="index.html" class = "main-nav-link">Main Page</a></li>
-                    <li><a href="all_games.html" class = "main-nav-link">All Games</a></li>
-                    <li><a href="myreviews.html" class = "main-nav-link">My Reviews</a></li>
-                    <li><a href="news.html" class = "main-nav-link">News</a></li>
+                <ul class = "nav-list">
+                    <li><a href="index.html" class = "nav-link">Main Page</a></li>
+                    <li><a href="all_games.html" class = "nav-link">All Games</a></li>
+                    <li><a href="myreviews.html" class = "nav-link">My Reviews</a></li>
+                    <li><a href="news.html" class = "nav-link">News</a></li>
                 </ul>
             </nav>
         </header>
 
-
-        <section class="game-news-container">
-            <h1 class = "game-title">Honkai: Star Rail Leaks New Path</h1>
-            <img src="styles/image/honkai-star-rail.avif" alt="#" width="500" height="300">
-            
-        </section>
+        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
+              </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active c-item">
+                <img class="d-block w-100 c-img" src="styles/image/honkai-img1.avif" alt="First slide">
+                <div class="carousel-caption  d-none d-md-block">
+                    <h2>Honkai: Star Rail Leaks New Path</h2>
+                    <button class="btn btn-primary btn-lg btn-block"><a href="https://hsr.hoyoverse.com/" target="_blank" class = "play-button">Play</a></button>
+                  </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img class="d-block w-100 c-img" src="styles/image/honkai-img2.avif" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Honkai: Star Rail Leaks New Path</h2>
+                    <button class="btn btn-primary btn-lg btn-block"><a href="https://hsr.hoyoverse.com/" target="_blank" class = "play-button">Play</a></button>
+                  </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img class="d-block w-100 c-img" src="styles/image/honkai-img3.avif" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Honkai: Star Rail Leaks New Path</h2>
+                    <button class="btn btn-primary btn-lg btn-block"><a href="https://hsr.hoyoverse.com/" target ="_blank" class = "play-button">Play</a></button>
+                  </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+              <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+          </div>
 
 
         <section class="all-text-content">
 
         <article class="game-text">
             <ul>
-                <li>Astro Bot is being lauded by critics and players following its early September launch.</li>
-                <li>Team Asobi threw a midnight launch party for the game in Astro's Playroom.</li>
-                <li>Fans are excited about potential post-launch plans for Astro Bot based on credits hints.</li>
+                <li>Honkai: Star Rail leaks are hinting at the addition of a new Path to the game's playable roster, the first of its kind in the HoYoverse RPG.</li>
+                <li>Leaks suggest that Remembrance may be joining the set of playable in-game Paths, with no confirmation about new characters, mechanics, or a release date.</li>
+                <li>Honkai: Star Rail has already teased multiple non-playable Paths through its in-game story and lore, hinting at Paths like Elation and Voracity.</li>
             </ul>
         </article>
 
         <article class = "game-text1">
-            <p>Team Asobi threw an Astro Bot launch party in Astro's Playroom. Astro Bot has been in the works for a few years, and cautious excitement has led to outright optimism on the part of many gamers. Many people have been wanting to see a full-fledged Astro Bot game for the PlayStation 5 since its launch, since Astro is a character that has been used to show off what makes the PlayStation brand so special in smaller titles like Astro's Playroom.</p>
-            <p>People are loving Astro Bot so far. This game is being lauded as PlayStation's own Super Mario 64 moment, albeit nearly 30 years later. For uninitiated gamers, Astro Bot is a brand-new character platformer title that makes use of the PlayStation brand and DualSense controller, using Sony deep cuts to appeal to nostalgia while seeking interesting ways to expand on traditional approaches to gameplay. Astro Bot launched on September 6.</p>
+            <p>A recent leak from Honkai: Star Rail is teasing the potential addition of a brand-new Path to the game, suggesting there may be a new class for the RPG's characters soon. Fans of the massively popular RPG from HoYoverse have plenty of options to consider when building team compositions, ranging from a character's individual stats to their synergy with other characters. Star Rail currently features seven different elemental "Types" among its playable cast, alongside seven unique Paths serving as classes. Now, leaks are potentially hinting at the addition of the game's eighth character Path.</p>
+            <p>Paths serve an important purpose in defining each character's playstyle within Honkai: Star Rail's roster, typically associated with a character's kit. Star Rail's Paths can offer a wide range of ability schemes for players, with Paths like The Hunt and Destruction often lending themselves to offensive characters while Abundance and Harmony fill support roles. HoYoverse has also teased several more in-game Paths through the lore and the Simulated Universe, including Remembrance, Elation, and Voracity among others. A new leak is suggesting one Honkai: Star Rail Path will finally become playable soon.</p>
         </article>
 
     </section>
 
+    <section class = "faq-container">
 
+        <h2 class = "faqs-title">FAQs</h2>
 
-    <!-- Question Container -->
+        <div class = "faq">
+            <div class = "question">
+                <h3>What about our site ? </h3>
+            
 
-    
-    <article class="question-container">
+            <svg width = "15" height = "10" viewBox = "0 0 42 25">
+                <path 
+                d = "M3 3L21 21L39 3"
+                stroke = "white"
+                stroke-width = "7"
+                stroke-linecap = "round"
+                />
+            </svg>
+        </div>
 
-        <h2 class="question-word">Do you have a fun to read this ?</h2>
+            <div class="answer">
+                <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p>
+            </div>
+        </div>
+
+        <div class = "faq">
+            <div class = "question">
+                <h3>What about our site ? </h3>
+            
+
+            <svg width = "15" height = "10" viewBox = "0 0 42 25">
+                <path 
+                d = "M3 3L21 21L39 3"
+                stroke = "white"
+                stroke-width = "7"
+                stroke-linecap = "round"
+                />
+            </svg>
+        </div>
+            <div class="answer">
+                <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p>
+            </div>
+        </div>
+
+        <div class = "faq">
+            <div class = "question">
+                <h3>What about our site ? </h3>
+
+            <svg width = "15" height = "10" viewBox = "0 0 42 25">
+                <path 
+                d = "M3 3L21 21L39 3"
+                stroke = "white"
+                stroke-width = "7"
+                stroke-linecap = "round"
+                />
+            </svg>
+
+        </div>
+
+            <div class="answer">
+                <p>The biggest video game news, rumors, previews, and info about the PC, PlayStation, Xbox, Nintendo, & mobile titles you play.</p>
+            </div>
+        </div>
+
+       
     
-    
-        <form action="" class = "form-for-question" >
-    
-            <input type="radio" id = "answer-yes">
-            <label for="yes" id="label-yes">Yes</label> 
-            <input type="radio" id = "answer-no">
-            <label for="no" id="label-no">No</label>
-            <button type = "button" id = "button">Submit</button>
-        </form>
-    
-    </article>
+    </section>
 
 
     <!-- Comments -->
@@ -86,7 +173,7 @@
 
         <div class = "user-comment-input">
             <i class='bx bxs-user-circle' id = "user-icon"></i>
-            <input type="text" value=" Reply / Post " id = "input-comment-container">
+            <input type="text" placeholder = " Reply / Post ">
             </div>
 
 
@@ -94,12 +181,54 @@
 
         <div class = "user-comment">
         <i class='bx bxs-user-circle' id = "user-icon"></i>
-        <span class = "username">デイニエル</span>
+        <span class = "username">armyofbile</span>
         </div>
 
         <article class = "text-comment">
-        <p>Finality I can avoid pulling for women and keep using my husbandos.</p>
+        <p>You are looking at a burned out crowd of people.</p>
+        <p> The content systems released over the past 4 years since Shadowkeep Launched seasons with the DCV. <br>
+         Have a cut and dry system for the msot part. Making a lot of the content feel the same.</p>
+         
         </article>
+
+        <div class="user-comment-container-in">
+
+            <div class = "user-comment">
+            <i class='bx bxs-user-circle' id = "user-icon"></i>
+            <span class = "username">David</span>
+            </div>
+    
+            <article class = "text-comment">
+            <p>i liked WQ and parts of L. hated the forced PvP if you want good stuff.</p>
+            <p>haven't bothered with Final Shape, didn't even read spoilers.wild guess: witness dead + new even badder baddie revealed.</p>
+            <p>back to Warframe.</p>
+            </article>
+
+            <div class="user-comment-container-in">
+
+            <div class = "user-comment">
+            <i class='bx bxs-user-circle' id = "user-icon"></i>
+            <span class = "username">xXGlitchIoXx</span>
+            </div>
+        
+            <article class = "text-comment">
+            <p>I enjoyed final shape but once completed, I felt little drawing me back to the game.</p>
+            <p> I am also fed up of all the best stuff being stuck behind PvP. Trials is infuriating if your not a total sweat and I've always spent as little time as possible in PvP.</p>
+            <p>The rest of the game has followed a similar formula for some time now meaning if your a long term player, there is little origional content being added</p>
+            </article>
+
+
+            <div class="user-comment-container-in">
+
+            <div class = "user-comment">
+            <i class='bx bxs-user-circle' id = "user-icon"></i>
+            <span class = "username">karl</span>
+            </div>
+            
+            <article class = "text-comment">
+            <p>lots of platforms that require jumping and lots co-ops quests **** game and player´s pacience.</p>
+            </article>
+
     </div>
 
     </section>
@@ -111,11 +240,12 @@
         <section class = "ourteam-container">
     
     
+    
         <div class="team-container">
     
     
             <div class="team-box">
-                <img src="styles/image/team2.jpg" alt="">
+                <img src="styles/image/team2.jpg" alt="team2    -img">
                 <h3>Danial Makhmud</h3>
                 <h5>Developer</h5>
                 <div class = "icons">
@@ -124,7 +254,7 @@
                 </div>
     
                 <div class="team-box">
-                    <img src="styles/image/team3.jpg" alt="">
+                    <img src="styles/image/team3.jpg" alt="team3-img">
                     <h4>Yersultan Boranbayev</h4>
                     <h5>Developer</h5>
                     <div class = "icons">
@@ -133,7 +263,7 @@
                 </div>
     
                     <div class="team-box">
-                        <img src="styles/image/team1.jpg" alt="">
+                        <img src="styles/image/team1.jpg" alt="team1-img">
                         <h3>Alisher Samat</h3>
                         <h5>Developer</h5>
                         <div class = "icons">
@@ -149,6 +279,9 @@
     </article>
     
     </footer>
+
+
+    <script src="js/news3.js"></script>
     
 
 </body>

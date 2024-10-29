@@ -1,0 +1,191 @@
+.register-all-container{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.register-container{
+    width: 420px;
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.register-container h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.register-container .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0 ;
+
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.input-box input::placeholder{
+    color: #ffffff;
+}
+
+
+#lock-1{
+    position: absolute;
+    right: 16%;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#lock-2{
+    position: absolute;
+    right: 16%;
+    top: 68%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#lock-3{
+    position: absolute;
+    right: 16%;
+    top: 49%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.register-container .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+
+.remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 3px;
+}
+
+
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.register-container .submit-btn{
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+
+}
+
+
+.register-container .register-account{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px 0 15px;
+}
+
+.register-account button{
+    border: 0;
+    background: transparent;
+}
+
+.register-account p a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.register-account p a:hover{
+    text-decoration: underline;
+}
+
+.popupClass{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50% ) scale(1);
+}
+
+
+
+.popupClass img{
+    width: 100px;
+    margin-top: -10%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupClass h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popupClass button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer ;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popupClass button a{
+    color: #ffffff;
+    text-decoration: none;
+}
