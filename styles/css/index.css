@@ -1,13 +1,4 @@
-header {
-    background-color: #9e9e9ec6;
-    color: black;
-    padding: 1em 2em;
-    align-items: center;
-}
-.navbar{
-    background-color: inherit;
-    color: inherit;
-}
+
 header h1 {
     font-size: 2em;
     margin: 0;
