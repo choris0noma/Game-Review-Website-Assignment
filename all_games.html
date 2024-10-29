@@ -12,12 +12,15 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/css/header-footer.css">
     <link rel="stylesheet" href="styles/css/all_games.css">
+    <link rel="stylesheet" href="styles/css/signUp.css">
+    <script defer src="js/signup.js"></script>
+    <script defer src="js/game_data.js"></script>
     <script defer src="js/time.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Game Review</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,11 +30,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item loginBtn">
+                            <button class="open-button nav-item" onclick="openForm()">Sing Up</button>
+                        </li>
+                        <li class="nav-item showAccountBtn" id ="show-account-button">
+                            <button class="open-button nav-item" onclick="">Account</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn btn-secondary">Dark Mode</button>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="all_games.html">Games</a>
+                            <a class="nav-link active" href="all_games.html">Games</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="myreviews.html">Reviews</a>
@@ -45,12 +57,61 @@
         </nav>
     </header>
     <main>
+        <div class="form-popup" id="signUpForm">
+            <form class="form-container" onsubmit="return validateEmail()">
+              <h1>Login</h1>
+          
+              <label for="email" ><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" id="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" id="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="reset" class="btn resetForm" style="background-color: red;">Reset</button>
+              <span id="error-message" style="color: red; display: none;"></span>
+            </form>
+          </div>
+          <div class="account-popup" id="account-popup">
+            <div class="popup-content">
+                <span class="close" id="close-popup">&times;</span>
+                <h2>Account Details</h2>
+                <img src="images/profile.jpg" alt="Profile Photo" id="profile-photo">
+                <p>Username: <span id="account-username"></span></p>
+                <button id="logout-button">log out</button>
+            </div>
+        </div>
+
+          <div class="game-show expandable" id = "show-exp">
+            <div class="game-image">
+                <img src="" class = "img-src" alt="Game Image">
+            </div>
+            <div class="game-details">
+                <h1 class="game-title">Game Title</h1>
+                <p class="game-description">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <div class="game-rating">
+                    <span class="rating-text">Rating:</span>
+                    <span class="rating-stars">
+                        9.0/10
+                    </span>
+                </div>
+                <button id="closeSlideUpBtn" onclick="closeSlideUp()">Close</button>
+            </div>
+        </div>
         <section class="filter container">
+            <audio id="click-sound" src="sounds/sound.wav" preload="auto"></audio>
             <h2>Filter Options</h2>
             <h6 id = "time"></h6>
             <form class="form">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="searchButton">Search</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="button" id="applyFilters">Apply Filters</button>
             </form>
             <div class="row">
                 <div class="col-md-6">
@@ -95,64 +156,14 @@
             </div>
         </section>
         <section class="games container">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game1.jpeg" alt="Lethal Company" class="img-fluid">
-                        <h3>Lethal Company</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game2.jpg" alt="Call Of Duty" class="img-fluid">
-                        <h3>Call Of Duty</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="small-game-window">
-                        <img src="images/game3.jpg" alt="Elden Ring" class="img-fluid">
-                        <h3>Elden Ring</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game4.jpg" alt="Baldur's Gate" class="img-fluid">
-                        <h3>Baldur's Gate</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
-                        <h3>RDR 2</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
-                        <h3>RDR 2</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="small-game-window">
-                        <img src="images/game5.jpeg" alt="Red Dead Redemption 2" class="img-fluid">
-                        <h3>RDR 2</h3>
-                    </div>
-                </div>
-               
+            <div class="row" id="game-list">
             </div>
         </section>
         
     </main>
     <footer id = "footer-container">
-    
         <section class = "ourteam-container">
-    
-       
-    
-    
         <div class="team-container">
-    
-    
             <div class="team-box">
                 <img src="styles/image/team2.jpg" alt="">
                 <h3>Danial Makhmud</h3>

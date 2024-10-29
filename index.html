@@ -11,16 +11,16 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/css/index.css">
-    <link rel="stylesheet" href="styles/css/header-footer.css">
     <link rel="stylesheet" href="styles/css/signUp.css">
-    <script defer src = "js/game_data.js"></script>
+    <link rel="stylesheet" href="styles/css/header-footer.css">
+    <script defer src="js/game_data.js"></script>
     <script defer src="js/signup.js"></script>
     <script defer src="js/index.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Game Review</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,7 +30,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
-                        <button class="open-button nav-item" onclick="openForm()">Sing Up</button>
+                        <li class="nav-item loginBtn">
+                            <button class="open-button nav-item" onclick="openForm()">Sing Up</button>
+                        </li>
+                        <li class="nav-item showAccountBtn" id ="show-account-button">
+                            <button class="open-button nav-item" onclick="">Account</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn btn-secondary">Dark Mode</button>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
@@ -51,53 +59,71 @@
     <main>
         <div class="form-popup" id="signUpForm">
             <form class="form-container" onsubmit="return validateEmail()">
-              <h1>Login</h1>
-          
-              <label for="email" ><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" id="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" id="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-              <span id="error-message" style="color: red; display: none;"></span>
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <button type="reset" class="btn resetForm" style="background-color: red;">Reset</button>
+                <span id="error-message" style="color: red; display: none;"></span>
             </form>
-          </div>
+        </div>
+        <div class="account-popup" id="account-popup">
+            <div class="popup-content">
+                <span class="close" id="close-popup">&times;</span>
+                <h2>Account Details</h2>
+                <img src="images/profile.jpg" alt="Profile Photo" id="profile-photo">
+                <p>Username: <span id="account-username"></span></p>
+                <button id="logout-button">log out</button>
+            </div>
+        </div>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="images/game2.jpg" class="d-block w-100" alt="First Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Call Of Duty</h5>
-                        <p>In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price and Task Force 141 face off against the ultimate threat.</p>
+                        <p>In the direct sequel to the record-breaking Call of Duty: Modern Warfare II, Captain Price
+                            and Task Force 141 face off against the ultimate threat.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="images/game7.jpeg" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Star Wars</h5>
-                        <p>Star Wars Outlaws is a 2024 action-adventure game developed by Massive Entertainment and published by Ubisoft.</p>
+                        <p>Star Wars Outlaws is a 2024 action-adventure game developed by Massive Entertainment and
+                            published by Ubisoft.</p>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
         <section>
             <h2>Popular Games</h2>
-            <div class="game-scroll" id ="popular-games"></div>
+            <div class="game-scroll" id="popular-games"></div>
         </section>
         <section>
             <h2>Recent Releases</h2>
@@ -105,10 +131,39 @@
         </section>
         <section>
             <h2>Trending</h2>
-            <div class="game-scroll" id = "trending"></div>
+            <div class="game-scroll" id="trending"></div>
         </section>
     </main>
     <footer id="footer-container">
+        <section>
+            <div class="faq">
+                <div class="question">
+                    <p>How to rate game?</p>
+
+                </div>
+                <div class="answer">
+                    <p>Click on game you want to rate and click rate button</p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question">
+                    <p>How rating is calculated?</p>
+
+                </div>
+                <div class="answer">
+                    <p>Average number of all rates</p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question">
+                    <p>Who are the authors of the website?</p>
+
+                </div>
+                <div class="answer">
+                    <p>Danial, Alisher, Yersultan</p>
+                </div>
+            </div>
+        </section>
 
         <section class="ourteam-container">
             <div class="team-container">

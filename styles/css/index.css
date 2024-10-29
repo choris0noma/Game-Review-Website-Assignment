@@ -1,10 +1,13 @@
 header {
-    background-color: #333;
-    color: white;
+    background-color: #9e9e9ec6;
+    color: black;
     padding: 1em 2em;
     align-items: center;
 }
-
+.navbar{
+    background-color: inherit;
+    color: inherit;
+}
 header h1 {
     font-size: 2em;
     margin: 0;
@@ -94,5 +97,43 @@ section {
     object-fit: cover;
     height: 20%;
     filter: brightness(0.6);
+}
+
+.faq {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(8, 4, 101);
+    border-radius: 10px;
+}
+ 
+.question p {
+    margin: 5px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: Verdana;
+    font-size: 20px;
+}
+ 
+.answer p {
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    background: rgb(6, 7, 57);
+    border-radius: 5px;
+}
+ 
+.faq:hover {
+    cursor: pointer;
+}
+ 
+.answer {
+    display: none;
+}
+ 
+.faq.active .answer {
+    display: block;
 }
 
