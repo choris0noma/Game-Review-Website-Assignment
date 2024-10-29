@@ -65,7 +65,6 @@ function displayLogin() {
     document.querySelector(".loginBtn").style.display = 'block';
 
     document.getElementById('signUpForm').style.display = 'none'
-    document.getElementById('show-account-button').style.display = 'none'
     document.getElementById('logout-button').style.display = 'none'
 }
 
