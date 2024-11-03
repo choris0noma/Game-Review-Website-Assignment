@@ -126,6 +126,8 @@ let filterItem = document.querySelector('.items-links');
 let filterContent = document.querySelectorAll(".game-news");
 
 
+const currentFilter = localStorage.getItem("filter");
+
 window.addEventListener('load', () => {
     filterItem.addEventListener('click', (selectedItem) => {
         if(selectedItem.target.classList.contains('items-link')){
@@ -133,6 +135,7 @@ window.addEventListener('load', () => {
             selectedItem.target.classList.add('menu-active');
             let filterName = selectedItem.target.getAttribute('data-name');
             filterContent.forEach((content) => {
+                localStorage.setItem("filter", "data-name")
                 let filterContents = content.getAttribute('data-name');
                 if(filterContents == filterName || filterName == 'all'){
                     content.style.visibility = 'visible';
@@ -146,6 +149,10 @@ window.addEventListener('load', () => {
                     content.style.opacity = '0'; 
                     content.style.transition = 'opacity 0.3s ease, height 0.3s ease';
                 }
+
+            
+
+
             });
 
 
