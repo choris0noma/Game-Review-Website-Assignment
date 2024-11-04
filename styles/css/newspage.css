@@ -279,6 +279,26 @@ body{
     margin: 10px;
 }
 
+.game-news-container1{
+    display: none;
+    border: solid 0.5px none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.game-news-container2{
+    display: none;
+    border: solid 0.5px none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.open-game-news{
+    display: block;
+}
 /* Game News */
 
 .game-news{ 
@@ -599,7 +619,7 @@ body{
 #lock-1{
     position: absolute;
     right: 16%;
-    top: 30%;
+    top: 32%;
     transform: translateY(-50%);
     font-size: 20px;
 }
@@ -636,7 +656,6 @@ body{
     font-weight: 600;
 
 }
-
 
 
 
@@ -740,11 +759,42 @@ body{
     color: #ffffff;
 }
 
-
-
-@media (max-width: 830px){
-    .game-news-container{
-        font-size: 5px;
-    }
+.footerButtom a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
+
+/* See More */
+
+.see-more-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.see-more-container .see-more-button{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    background: #C0C0C0;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, .5);
+    color: #FFFFFF;
+}
+
+.see-more-container2{
+    display: flex;
+    justify-content: center;
+}
+
+
+.see-more-container2 .see-more-button2{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    background: #C0C0C0;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, .5);
+    color: #FFFFFF;
+}

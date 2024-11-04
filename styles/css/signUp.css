@@ -65,7 +65,7 @@ input[type="text"] {
   border-radius: 4px;
 }
 
-button {
+.open-button {
   width: 100%;
   padding: 10px;
   background-color: #28a745;
@@ -75,7 +75,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.open-button:hover {
   background-color: #218838;
 }
 

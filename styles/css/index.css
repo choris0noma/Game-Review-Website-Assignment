@@ -1,12 +1,11 @@
-
 header h1 {
     font-size: 2em;
     margin: 0;
 }
+
 section h2{
     margin-left: 1em;
 }
-
 
 section {
     font-size: medium;
@@ -28,7 +27,6 @@ section {
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-
 
 .game-window {
     width: 250px;
@@ -80,10 +78,9 @@ section {
     color: #007BFF;
 }
 .carousel-inner img {
-
     margin: auto;
-
 }
+
 .carouselExampleCaptions img{
     object-fit: cover;
     height: 20%;

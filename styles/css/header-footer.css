@@ -14,46 +14,43 @@ body {
     color: inherit;
 }
 
-header {
-    background-color: inherit;
-    color: inherit;
-    padding: 1em 2em;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 2em;
+.main-header {
     margin: 0;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
 }
 
-section h2 {
-    margin-left: 1em;
+.main-header a{
+    text-decoration: none;
+    color: white;
 }
 
-.navbar .navbar-brand,
-.navbar .nav-link {
-    color: inherit !important; 
+.main-header .navbar-brand {
+    margin: 0;
+    font-size: 2em;
 }
 
+.main-header .nav-list {
+    list-style: none;
+}
 
-
-
-nav {
+.main-nav {
+    background-color: transparent;
     position: static;
-    color:inherit;
-
 }
 
-nav li a:hover {
-    background: #007BFF;
-    border-radius: 5px;
-
+.main-nav .nav-list {
+    display: flex;
+    justify-content: flex-end;
 }
 
-nav li a {
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-
+.main-nav .nav-list li {
+    margin: 0;
 }
 
 footer {
@@ -63,14 +60,16 @@ footer {
 }
 
 .ourteam-container {
-    margin: 0;
     position: relative;
-    width: 100%;
+    width: 97%;
+    height: 500px;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .team-container {
@@ -83,7 +82,6 @@ footer {
     gap: 50px;
     text-align: center;
     margin-top: 10px;
-
 }
 
 .team-container img {
@@ -147,14 +145,18 @@ footer {
     cursor: pointer;
 }
 
-.copyrights {
+.footerButtom {
+    background-color: #333;
     padding: 20px;
     text-align: center;
 }
 
-.copyrights #copyright {
+.footerButtom #copyright {
     color: #ffffff;
+}
 
+.footerButtom a{
+    color: #ffffff;
 }
 
 body.dark-mode {

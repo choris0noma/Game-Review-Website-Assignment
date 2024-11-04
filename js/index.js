@@ -35,7 +35,7 @@ gameWindows.forEach((event) => {
     event.addEventListener("click", (e) => {
         var id = e.currentTarget.id.split('-')[1];
         localStorage.setItem('gameId', id);
-        window.open('individual.html', '_blank');
+        window.open('individual.html', '_self');
     });
 });
 

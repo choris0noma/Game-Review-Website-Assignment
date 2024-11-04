@@ -177,17 +177,15 @@ function myfunction(event){
 
 
 
-
-
 function checkUser(){
 
 var email = document.getElementById("email").value;
 var password = document.getElementById("password").value;
 
-const emailSaved = localStorage.getItem('email')
-const passwordSaved = localStorage.getItem('password')
+const emailSaved = localStorage.getItem('email');
+const passwordSaved = localStorage.getItem('password');
 
-var usernameSaved = localStorage.getItem('username')
+var usernameSaved = localStorage.getItem('username');
 
 
     if(email === emailSaved && password === passwordSaved){
@@ -195,6 +193,29 @@ var usernameSaved = localStorage.getItem('username')
         username.innerHTML = "Thank you! " + usernameSaved;
     }
     else {
-        alert("Error")
+        alert("Error");
     }
+}
+
+
+// See More 
+
+let seeMoreButton = document.getElementById("see-more-button");
+
+let seeMoreButton2 = document.getElementById("see-more-button2");
+
+let gameNews = document.querySelector(".game-news-container1");
+
+
+function seeMore(){
+    seeMoreButton.style.display = 'none';
+    gameNews.className = "open-game-news";
+    seeMoreButton2.style.display = 'block';
+}
+
+let gameNews2 = document.querySelector(".game-news-container2");
+
+function seeMore2(){
+    seeMoreButton2.style.display = 'none';
+    gameNews2.className = "open-game-news";
 }
