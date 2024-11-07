@@ -95,12 +95,12 @@ function closePopup(){
 
 
 const audio1 = new Audio();
-audio1.src = "./clickSound.wav";
+audio1.src = "sounds/clickSound.wav";
 
 
 
 const audio2 = new Audio();
-audio2.src = "./clickSound2.wav";
+audio2.src = "sounds/clickSound2.wav";
 
 
 
