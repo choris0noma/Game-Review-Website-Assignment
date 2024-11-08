@@ -161,9 +161,16 @@ footer {
 
 body.dark-mode {
     background-color: #121212;
-    color: #f5f5f5;
+    color: #f5f5f5 !important;
 }
 
+/*do not touch code below ||
+                          \/                      
+*/
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: inherit !important; 
+}
 
 .dark-mode .game-window {
     background-color: #1a1a1a;
