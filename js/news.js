@@ -125,41 +125,57 @@ function closeRegisterPopup(){
 let filterItem = document.querySelector('.items-links');
 let filterContent = document.querySelectorAll(".game-news");
 
-
-const currentFilter = localStorage.getItem("filter");
+const currentFilter = localStorage.getItem("filter") || 'all'; 
 
 window.addEventListener('load', () => {
+    const activeFilterItem = document.querySelector(`[data-name="${currentFilter}"]`);
+    if (activeFilterItem) {
+        document.querySelector('.menu-active')?.classList.remove('menu-active');
+        activeFilterItem.classList.add('menu-active');
+    }
+
+    filterContent.forEach((content) => {
+        let filterContents = content.getAttribute('data-name');
+        if (filterContents == currentFilter || currentFilter == 'all') {
+            content.style.visibility = 'visible';
+            content.style.height = 'auto';
+            content.style.opacity = '1';
+            content.style.transition = 'opacity 0.3s ease, height 0.3s ease';
+        } else {
+            content.style.visibility = 'hidden';
+            content.style.height = '0';
+            content.style.opacity = '0';
+            content.style.transition = 'opacity 0.3s ease, height 0.3s ease';
+        }
+    });
+
+
     filterItem.addEventListener('click', (selectedItem) => {
-        if(selectedItem.target.classList.contains('items-link')){
+        if (selectedItem.target.classList.contains('items-link')) {
             document.querySelector('.menu-active').classList.remove('menu-active');
             selectedItem.target.classList.add('menu-active');
             let filterName = selectedItem.target.getAttribute('data-name');
             filterContent.forEach((content) => {
-                localStorage.setItem("filter", "data-name")
                 let filterContents = content.getAttribute('data-name');
-                if(filterContents == filterName || filterName == 'all'){
+                if (filterContents == filterName || filterName == 'all') {
                     content.style.visibility = 'visible';
                     content.style.height = 'auto';
-                    content.style.opacity = '1'; 
-                    content.style.transition = 'opacity 0.3s ease, height 0.3s ease'; 
-                }
-                else{
+                    content.style.opacity = '1';
+                    content.style.transition = 'opacity 0.3s ease, height 0.3s ease';
+                } else {
                     content.style.visibility = 'hidden';
                     content.style.height = '0';
-                    content.style.opacity = '0'; 
+                    content.style.opacity = '0';
                     content.style.transition = 'opacity 0.3s ease, height 0.3s ease';
                 }
-
-            
-
-
             });
 
-
-
+        
+            localStorage.setItem("filter", filterName);
         }
     });
-})
+});
+
  
 // User Save
 function myfunction(event){
@@ -197,24 +213,6 @@ var usernameSaved = localStorage.getItem('username');
 }
 
 
-// See More 
-
-let seeMoreButton = document.getElementById("see-more-button");
-
-let seeMoreButton2 = document.getElementById("see-more-button2");
-
-let gameNews = document.querySelector(".game-news-container1");
 
 
-function seeMore(){
-    seeMoreButton.style.display = 'none';
-    gameNews.className = "open-game-news";
-    seeMoreButton2.style.display = 'block';
-}
 
-let gameNews2 = document.querySelector(".game-news-container2");
-
-function seeMore2(){
-    seeMoreButton2.style.display = 'none';
-    gameNews2.className = "open-game-news";
-}
