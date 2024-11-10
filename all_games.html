@@ -19,16 +19,41 @@
 </head>
 
 <body>
-
-    <header class = "main-header">
-        <h1 class = "navbar-brand"><a href="index.html">Game Review</a></h1>
-        <nav class = "main-nav nav-dark bg-muted">
-            <ul class = "nav-list">
-                <li><a href="index.html" class = "nav-link">Main Page</a></li>
-                <li><a href="all_games.html" class = "nav-link" >All Games</a></li>
-                <li><a href="myreviews.html" class = "nav-link">My Reviews</a></li>
-                <li><a href="news.html" class = "nav-link">News</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Game Review</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item loginBtn">
+                            <button class="open-button nav-link" onclick="openForm()">Sing Up</button>
+                        </li>
+                        <li class="nav-item showAccountBtn" id ="show-account-button">
+                            <button class="open-button nav-link" onclick="">Account</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="nav-link">Dark Mode</button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="all_games.html">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="myreviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">News</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
    
