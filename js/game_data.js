@@ -41,5 +41,13 @@ const games =
         "image":"images/game6.jpg",
         "genre": "adventure",
         "platform": "pc"
+    },
+    {
+        "name" : "Astro Bot",
+        "rating": 9.1,
+        "image":"images/game12.avif",
+        "genre": "adventure",
+        "platform": "ps5"
+
     }
 ]

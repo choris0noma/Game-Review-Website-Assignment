@@ -1,10 +1,94 @@
-header h1 {
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .2s;
+}
+
+.main-header {
+    margin: 0;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.main-header a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-header .navbar-brand {
+    margin: 0;
     font-size: 2em;
+}
+
+.main-header .nav-list {
+    list-style: none;
+}
+
+.main-nav {
+    background-color: transparent;
+    position: static;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav .nav-list li {
     margin: 0;
 }
 
+.main-nav .nav-list li a {
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav .nav-list li .nav-link:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+
+/* Title */
+
+.title-container {
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: solid 2px #000000;
+    border-radius: 0;
+
+}
+
+.title-container h1{
+    color: #000000;
+    padding: 10px;
+    margin: 3px;
+   
+}
+
+
+.title-container p{
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 3px;
+    font-size: 25px;
+}
+
+
+
 section h2{
-    margin-left: 1em;
+    margin-left: 5px;
+    padding: 10px;
+    border-bottom: solid 2px #000000;
+    border-radius: 0;
 }
 
 section {
@@ -26,6 +110,7 @@ section {
     max-width: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth; 
+    margin-top: 20px;
 }
 
 .game-window {
@@ -125,3 +210,107 @@ section {
     display: block;
 }
 
+/* Our Team */
+
+
+.ourteam-container {
+    position: relative;
+    width: 97%;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.team-container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.team-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.ourteam-word {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+}
+.team-box{
+    padding: 16px;
+    background-color: #1b1229;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.team-box h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+}
+
+.team-box h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+
+}
+
+.icons #telegram-icon{
+   display: inline-block;
+   color: #ffffff;
+   font-size: 20px;
+   margin: 0 8px;
+   transition: all .38s ease; 
+}
+
+.icons #telegram-icon:hover{
+    transform: scale(1.2);
+}
+
+.team-box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.footerButtom{
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerButtom #copyright{
+    color: #ffffff;
+}
+
+.footerButtom a{
+    color: #ffffff;
+    text-decoration: none;
+}

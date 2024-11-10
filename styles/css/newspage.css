@@ -125,7 +125,6 @@ body{
 
 /* Current Date */
 
-
 #current-date-btn{
     position: absolute;
     right: 2%;
@@ -232,7 +231,6 @@ body{
 }
 
 
-
 .dark {
     background: #151d2a;
 
@@ -257,7 +255,6 @@ body{
     background: #fafafa;
     transform: translateX(60px);
 }
-
 
 
 /* All News */
@@ -299,6 +296,8 @@ body{
 .open-game-news{
     display: block;
 }
+
+
 /* Game News */
 
 .game-news{ 
