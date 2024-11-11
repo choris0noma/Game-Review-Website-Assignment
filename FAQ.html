@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Game Review</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faq.html">FAQ</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4 flex-grow-1">
+        <h2 class="text-center mb-4">Frequently Asked Questions (FAQ)</h2>
+        <div class="d-grid gap-3 col-6 mx-auto">
+
+            <button class="btn btn-primary" onclick="showFAQContent('rules')">Rule</button>
+            <button class="btn btn-primary" onclick="showFAQContent('games')">Games</button>
+            <button class="btn btn-primary" onclick="showFAQContent('general')">General questions</button>
+            <button class="btn btn-primary" onclick="showFAQContent('profile')">User profile</button>
+            <button class="btn btn-primary" onclick="showFAQContent('reviews')">Reviews</button>
+
+        </div>
+
+        <div id="faqContent" class="mt-5">
+            <h3 class="text-center">Choose categories</h3>
+            <p class="text-center">Click on one of the buttons above to see information.</p>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Game Review. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>
