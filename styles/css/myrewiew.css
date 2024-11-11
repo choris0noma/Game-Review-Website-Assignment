@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --primary-color: #f4f4f4;
+    --secondary-color: #28a745;
+    --background-color:#f4f4f4 ;
+    --text-color: #333;
+    --dark-background: #121212;
+    --dark-text: #f4f4f4;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+.header-section {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Review Section */
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-family: 'Lora', serif;
+    font-size: 1.5em;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.theme-switcher .btn-dark {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+.theme-switcher .btn-light {
+    background-color: #f4f4f4;
+    color: #121212;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+footer.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+#changeBackgroundBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#dateTimeDisplay {
+    margin-top: 10px;
+}
+
+#subscriptionForm {
+    margin: 20px 0;
+}
+
+.star {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.star.selected {
+    color: #ffd700;
+}
+
+
+.hidden {
+    display: none;
+}
