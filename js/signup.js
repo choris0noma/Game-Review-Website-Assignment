@@ -65,7 +65,6 @@ function displayLogin() {
     document.querySelector(".loginBtn").style.display = 'block';
 
     document.getElementById('signUpForm').style.display = 'none'
-    document.getElementById('logout-button').style.display = 'none'
 }
 
 function displayShowAccount(username) {
@@ -73,7 +72,6 @@ function displayShowAccount(username) {
     document.querySelector(".loginBtn").style.display = 'none';
 
     document.getElementById('signUpForm').style.display = 'none';
-    document.getElementById('account-username').textContent = username;
 }
 
 
@@ -81,15 +79,7 @@ document.getElementById('show-account-button').addEventListener('click', () => {
     document.getElementById('account-popup').style.display = 'block'
 })
 
-document.getElementById('close-popup').addEventListener('click', () => {
-    document.getElementById('account-popup').style.display = 'none'
-})
 
-document.getElementById('logout-button').addEventListener('click', () => {
-    document.getElementById('account-popup').style.display = 'none'
-    localStorage.removeItem('username')
-    displayLogin()
-})
 
 checkLogin()
 

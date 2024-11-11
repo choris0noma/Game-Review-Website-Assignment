@@ -1,0 +1,68 @@
+.personal-account-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: inherit !important;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-details {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.account-details p {
+    margin: 5px 0;
+}
+
+#edit-info-button,
+#logout-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.personal-account-container{
+    color: inherit !important;
+}
+
+@media (min-width: 768px) {
+    .personal-account-container {
+        max-width: 600px;
+    }
+
+    #edit-info-button,
+    #logout-button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .personal-account-container {
+        padding: 15px;
+    }
+
+    .account-details p {
+        font-size: 0.9em;
+    }
+}
