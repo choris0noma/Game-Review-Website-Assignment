@@ -4,58 +4,6 @@ body{
     transition: .2s;
 }
 
-.main-header {
-    margin: 0;
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-}
-
-.main-header a{
-    text-decoration: none;
-    color: white;
-}
-
-.main-header .navbar-brand {
-    margin: 0;
-    font-size: 2em;
-}
-
-.main-header .nav-list {
-    list-style: none;
-}
-
-.main-nav {
-    background-color: transparent;
-    position: static;
-}
-
-.main-nav .nav-list {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-nav .nav-list li {
-    margin: 0;
-}
-
-.main-nav .nav-list li a {
-    display: block;
-    padding: 1em 2em;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.main-nav .nav-list li .nav-link:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
 
 
 /* Title  */
@@ -71,13 +19,13 @@ body{
 }
 
 .title-container h1{
-    color: white;
+    color: inherit !important;
     padding: 10px;
    
 }
 
 .title-container p{
-    color: white;
+    color: inherit !important;
     margin: 8px;
     font-size: 20px;
 }
@@ -103,7 +51,7 @@ body{
 }
 
 .first-content .news-text{
-    color: #ffffff;
+    color: inherit !important;
     position: absolute;
     bottom: 16%;
     left: 4%;
@@ -120,14 +68,14 @@ body{
     position: absolute;
     top: 34%;
     right: 10%;
-    color: #ffffffff;
+    color: inherit !important;
 }
 
 .popular-news-text:before{
     content:" ";
     height: 2px;
     width: 130px;
-    background: white;
+    background: inherit !important;
     display: block;
     position: absolute; 
     top: 58%;
@@ -167,7 +115,7 @@ body{
 }
 
 .popular-item .popular-text{
-    color: #ffffffff;
+    color: inherit !important;
     font-size: 18px;
     text-decoration: none;
 
@@ -199,7 +147,7 @@ body{
     padding: 10px 30px;
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: inherit !important;
     cursor: pointer;
     border-radius: 30px;
     transition: .4s ease;
@@ -208,12 +156,12 @@ body{
 
 .items-link:hover{
     background: #007BFF;
-    color: #fff;
+    color: inherit !important;
     
 }
 .menu-active{
     background: #007BFF;
-    color: #fff;
+    color: inherit !important;
 }
 
 /* Current Date */
@@ -226,7 +174,7 @@ body{
     margin: 15px;
     margin-right: 40px;
     border-radius: 3px ;
-    color: #ffffff;
+    color: inherit !important;
     background: transparent;
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, .2);
@@ -243,7 +191,7 @@ body{
    right: 1%;
    top: 32%;
    font-size: 20px;
-   color: #ffffff;
+   color: inherit !important;
 
 }
 
@@ -251,7 +199,7 @@ body{
     position: absolute;
     right: 2%;
     top: 11%;
-    color: #ffffff;
+    color: inherit !important;
     background: transparent;
     display: none;
 }
@@ -261,93 +209,6 @@ body{
 }
 
 
-/* Dark and Light Mode */
-
-.toggle{
-    position: absolute;
-    right: 1%;
-    top: 63%;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    width: 115px;
-    height: 48px;
-    border-radius: 50px;
-    transition: .2s ;
-}
-
-.toggle i {
-    margin-top: 4px;
-    width: 50%;
-    line-height: 40px;
-    text-align: center;
-    font-size: 30px;
-    z-index: 1,
-    
-
-}
-
-.toggle .ball {
-    position: absolute;
-    width: 37px;
-    height: 37px;
-    margin: 7.5px;
-    border-radius: 50%;
-    transition: .3s ease-out;
-    margin-bottom: 4px;
-
-}
-
-
-.light{
-    
-}
-
-.light .toggle{
-    background: linear-gradient(145deg, #FFFFFF, #FFF5EE);
-    box-shadow: 2px 1px 2px #e6e6e6,
-               -1px -1px 1px #ffffff;
- 
-}
-
-.light .toggle .bxs-sun {
-    color: #fafafafa;
-
-}
-
-.light .toggle .bx-moon{
-    color: #000000
-}
-
-.light .toggle .ball{
-    background: #151d2a;
-}
-
-
-.dark {
-    background: #151d2a;
-
-}
-
-.dark .toggle{
-    background: #151d2a;
-    box-shadow: 3px 3px 3px #0e131b,
-               -3px -3px 3px #1c2739;
- 
-}
-
-.dark .toggle .bx-sun {
-    color: #fafafa;
-}
-
-.dark .toogle .bxs-moon{
-    color: #151d2a;
-}
-
-.dark .toggle .ball{
-    background: #fafafa;
-    transform: translateX(60px);
-}
 
 
 /* All News */
@@ -414,25 +275,24 @@ body{
 }
 
 .game-news h2 {
-    color: #ffffff;
+  
     margin: 13px;
 }
 
 .game-news  h2 p {
-    color: #ffffff;
     font-size: 20px;
 }
 
 .game-news h2 a {
-    color: #ffffff;
     text-decoration: none;
 }
 
 .game-news h2 a:hover {
-    color: #F0FFF0;
     cursor: pointer;
 }
-
+div{
+    color:inherit !important;
+}
 
 /* Trailer */
 
@@ -458,13 +318,13 @@ body{
 
 .game-trailer-container h4{
     margin: 0;
-    color: #ffffff;
+    color: inherit !important;
     font-size: 22px;
 }
 
 .game-trailer-container h4 p{
     margin: 3px;
-    color: #ffffff;
+    color: inherit !important;
     font-size: 22px;
 }
 
@@ -493,7 +353,7 @@ body{
     border: 3px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #ffffff;
+    color: inherit !important;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -520,13 +380,13 @@ body{
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     font-size: 16px;
-    color: #ffffff;
+    color: inherit !important;
     padding: 20px 45px 20px 20px;
 
 }
 
 .input-box input::placeholder{
-    color: #ffffff;
+    color: inherit !important;
 }
 
 
@@ -555,13 +415,13 @@ body{
 
 
 .remember-forgot label input {
-    accent-color: #ffffff;
+    accent-color: inherit !important;
     margin-right: 3px;
 }
 
 
 .remember-forgot a {
-    color: #ffffff;
+    color: inherit !important;
     text-decoration: none;
 
 }
@@ -597,7 +457,7 @@ body{
 }
 
 .register-account p a{
-    color: #ffffff;
+    color: inherit !important;
     text-decoration: none;
     font-weight: 600;
 }
