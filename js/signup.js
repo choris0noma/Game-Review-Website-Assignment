@@ -1,13 +1,13 @@
-let form = document.getElementById("signUpForm");
+let signUpForm = document.getElementById("signUpForm");
 
 function openForm() 
 {
-    form.style.display = "block";
+    signUpForm.style.display = "block";
 }
   
 function closeForm() 
 {
-    form.style.display = "none";
+    signUpForm.style.display = "none";
 }
 
 function validateEmail() 
