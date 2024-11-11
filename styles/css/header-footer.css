@@ -146,18 +146,13 @@ footer {
 }
 
 .footerButtom {
-    background-color: #333;
+    color: inherit !important;
+    background: inherit !important;
     padding: 20px;
     text-align: center;
 }
 
-.footerButtom #copyright {
-    color: #ffffff;
-}
 
-.footerButtom a{
-    color: #ffffff;
-}
 
 body.dark-mode {
     background-color: #121212;
@@ -207,5 +202,10 @@ body.dark-mode {
 .answer.dark-mode {
     background-color: #333;
     color: #ffffff;
+}
+
+.nav-item:hover{
+    background-color: #3946d4;
+    border-radius: 5px;
 }
 

@@ -2,7 +2,7 @@
     max-width: 90%; 
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: inherit;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +48,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.game-container{
+    color: inherit !important;
+}
 .rating-text {
     margin-right: 10px;
 }
